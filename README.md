@@ -6,4 +6,13 @@ to compare network API documentation with data
 
 Require an account on the platform grid5000 from INRIA.
 
+Gem dependencies :
+- rubygems
+- net-ssh-gateway
+- rest-client
+- json
+- optparse
+
+
+
 
