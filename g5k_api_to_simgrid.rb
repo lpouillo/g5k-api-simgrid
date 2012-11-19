@@ -5,6 +5,7 @@ require 'net/ssh/gateway'
 require 'rest-client'
 require 'json'
 require 'optparse'
+require 'builder'
 
 # PARAMETERS
 grid_suffix='.grid5000.fr'       
@@ -57,10 +58,16 @@ end
 
 
 def api_connexion(options)
+
   # API connection through the gateway  
-  access = Net::SSH::Gateway.new('access.grid5000.fr', options[:user])
-  port = access.open('api-proxy.sophia.grid5000.fr', 443, 14443) 
-  url='https://localhost:'+port.to_s
+  begin
+   access = Net::SSH::Gateway.new('access.grid5000.fr', options[:user])
+   port = access.open('api-proxy.sophia.grid5000.fr', 443, 14443) 
+   url='https://localhost:'+port.to_s
+  rescue
+…  url='https://api-proxy.sophia.grid5000.fr'
+  end
+  
   return RestClient::Resource.new(url, :user => options[:user])
 end
 
@@ -133,7 +140,7 @@ end
 
 
 # Header
-puts "<?xml version=\"1.0\"?>"
+puts "<?xml version=\"1.0\"?>" 
 puts "<!DOCTYPE platform SYSTEM \"http://simgrid.gforge.inria.fr/simgrid.dtd\">"
 puts "<platform version=\"3\">"
 puts "<AS id=\"platform\" routing=\"Floyd\">"
