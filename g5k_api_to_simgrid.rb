@@ -5,7 +5,7 @@ require 'net/ssh/gateway'
 require 'rest-client'
 require 'json'
 require 'optparse'
-require 'builder'
+#require 'builder'
 
 # PARAMETERS
 grid_suffix='.grid5000.fr'       
