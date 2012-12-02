@@ -65,7 +65,7 @@ def api_connexion(options)
    port = access.open('api-proxy.sophia.grid5000.fr', 443, 14443) 
    url='https://localhost:'+port.to_s
   rescue
-…  url='https://api-proxy.sophia.grid5000.fr'
+   url='https://api-proxy.sophia.grid5000.fr'
   end
   
   return RestClient::Resource.new(url, :user => options[:user])
