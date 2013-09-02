@@ -3,8 +3,10 @@
 from pprint import pprint
 from geopy import geocoders  
 from execo_g5k.api_utils import get_site_attributes, get_g5k_sites, get_resource_attributes, get_site_clusters, get_cluster_attributes
+import Image, ImageDraw
 import matplotlib as mpl
 from mpl_toolkits.basemap import Basemap
+from matplotlib.image import pil_to_array 
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -17,7 +19,7 @@ for site in get_g5k_sites():
     attr = get_site_attributes(site)
     attr_sites[site] = {'latitude': attr['latitude'], 'longitude': attr['longitude']}
 
-net_equip = get_resource_attributes('grid5000/network_equipments')
+
 
 texts = []
 lons_sites = []
@@ -27,7 +29,7 @@ lats_renater = []
 links_10G = []
 links_1G = []
 
-
+net_equip = get_resource_attributes('grid5000/network_equipments')
 gn = geocoders.GeoNames()
 for equip in net_equip['items']:
     site = equip['uid'].split('-')[1]
@@ -62,52 +64,40 @@ for equip in net_equip['items']:
                     lons_renater.append( attr[1][1])
                     lats_renater.append( attr[1][0])
 
-#   
-#pprint(lons_sites)
-#pprint(lats_sites)
-#pprint(lons_renater)
-#pprint(lats_renater)
-#pprint(links_10G)
-#pprint(links_1G)
-
-
-
 plt.figure(figsize = (10, 10))
 
 
 m = Basemap(projection='merc', llcrnrlat=42, urcrnrlat=51.5,
             llcrnrlon=-5, urcrnrlon=11, lat_ts=20, resolution='i')
-m.drawcoastlines()
+
+pilImage = Image.open('map_bg.png') 
+pilImage = pilImage.transpose(Image.FLIP_TOP_BOTTOM)
+rgba = pil_to_array(pilImage) 
+im = m.imshow(rgba) 
+
 # draw parallels and meridians.
 m.drawparallels(np.arange(40.,55.,5.))
 m.drawmeridians(np.arange(-5.,9.,5.))
-m.drawparallels(np.arange(-90.,91.,30.))
-m.drawcountries(linewidth=1)
-
-#m.drawrivers()
-m.bluemarble()
 
 for link in links_10G:
-    m.drawgreatcircle(link[0], link[1], link[2], link[3], color='#888888', lw = 1)
+    m.drawgreatcircle(link[0], link[1], link[2], link[3], color='#444444', lw = 1)
 for link in links_1G:
-    m.drawgreatcircle(link[0], link[1], link[2], link[3], color='#888888', lw = 1, dashes =[1, 0, 0, 1])
+    m.drawgreatcircle(link[0], link[1], link[2], link[3], color='#444444', lw = 1, dashes =[1, 0, 0, 1])
 
 x, y = m(lons_sites, lats_sites)
 m.scatter(x, y, 20, marker='o', color='r')
 
 x, y = m(lons_renater, lats_renater)
 m.scatter(x, y, 15, marker='o', color='b')
-#m.fillcontinents(color='coral',lake_color='aqua')
+
+
 
 for text in texts:
-#    if text[0] < 0:
-#        diff_x = - 0.1 - len(text[2])/4
-#    else:
-    diff_x = 0.1
-    diff_y = 0.05
+    diff_x = 0.2
+    diff_y = 0.
     
     x,y = m(text[0]+diff_x, text[1]+diff_y)
-    plt.text(x, y, text[2], color = '#dddddd', fontsize = 18)
+    plt.text(x, y, text[2], color = '#222222', backgroundcolor='#dddddd', fontsize = 18)
 
 plt.savefig('g5k_map.png', dpi = 300, bbox_inches='tight') 
 
