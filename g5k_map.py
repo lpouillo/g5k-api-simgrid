@@ -19,8 +19,6 @@ for site in get_g5k_sites():
     attr = get_site_attributes(site)
     attr_sites[site] = {'latitude': attr['latitude'], 'longitude': attr['longitude']}
 
-
-
 texts = []
 lons_sites = []
 lats_sites = []
@@ -103,21 +101,14 @@ for text in texts:
         diff_y = 0.
     else:
         diff_y = 1.0
-    
-    
-    
-    
     x,y = m(text[0]+diff_x, text[1]+diff_y)
     plt.text(x, y, text[2], color = '#222222', backgroundcolor='#eeeeee', fontsize = 14)
     cl_text = ''
     
-    
     for cluster, n_nodes in sites_clusters[text[2].split(' ')[0].lower()].iteritems():
-        cl_text += str(n_nodes).ljust(4, ' ')+cluster.rjust(4)+' '+'\n'
+        cl_text += str(n_nodes).ljust(4, ' ')+cluster+' '+'\n'
         diff_y -= 0.2
     x,y = m(text[0]+diff_x, text[1]+diff_y)
-    
-    
     plt.text(x, y, cl_text[:-2], color = '#222222', backgroundcolor='#EEEEEE', fontsize = 8)
 
 plt.savefig('g5k_map.png', dpi = 300, bbox_inches='tight') 
