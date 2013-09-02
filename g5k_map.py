@@ -28,20 +28,26 @@ lons_renater = []
 lats_renater = [] 
 links_10G = []
 links_1G = []
+sites_clusters = {}
 
 net_equip = get_resource_attributes('grid5000/network_equipments')
 gn = geocoders.GeoNames()
+
 for equip in net_equip['items']:
     site = equip['uid'].split('-')[1]
     if site in attr_sites.keys():
         lons_sites.append(attr_sites[site]['longitude'])
         lats_sites.append(attr_sites[site]['latitude'])
         
-        sites_nodes = 0
+#        sites_nodes = 0
+        sites_clusters[site] = {}
         for cluster in get_site_clusters(site):
-            sites_nodes += get_resource_attributes('grid5000/sites/'+site+'/clusters/'+cluster+'/nodes')['total'] 
+            cluster_nodes = get_resource_attributes('grid5000/sites/'+site+'/clusters/'+cluster+'/nodes')['total']
+            sites_clusters[site][cluster] = cluster_nodes 
+#            sites_nodes += cluster_nodes
             
-        texts.append ( (attr_sites[site]['longitude'], attr_sites[site]['latitude'], site.title()+' ('+str(sites_nodes)+')' ))
+#        texts.append ( (attr_sites[site]['longitude'], attr_sites[site]['latitude'], site.title()+' ('+str(sites_nodes)+')' ))
+        texts.append ( (attr_sites[site]['longitude'], attr_sites[site]['latitude'], site.title() ))
         for lc in equip['linecards']:
             for p in lc['ports']:
                 dest = p['uid'].split('-')[1]
@@ -70,7 +76,7 @@ plt.figure(figsize = (10, 10))
 m = Basemap(projection='merc', llcrnrlat=42, urcrnrlat=51.5,
             llcrnrlon=-5, urcrnrlon=11, lat_ts=20, resolution='i')
 
-pilImage = Image.open('map_bg.png') 
+pilImage = Image.open('osm_map_bg.png') 
 pilImage = pilImage.transpose(Image.FLIP_TOP_BOTTOM)
 rgba = pil_to_array(pilImage) 
 im = m.imshow(rgba) 
@@ -91,13 +97,28 @@ x, y = m(lons_renater, lats_renater)
 m.scatter(x, y, 15, marker='o', color='b')
 
 
-
 for text in texts:
     diff_x = 0.2
-    diff_y = 0.
+    if text[2].split(' ')[0].lower() != 'lyon':
+        diff_y = 0.
+    else:
+        diff_y = 1.0
+    
+    
+    
     
     x,y = m(text[0]+diff_x, text[1]+diff_y)
-    plt.text(x, y, text[2], color = '#222222', backgroundcolor='#dddddd', fontsize = 18)
+    plt.text(x, y, text[2], color = '#222222', backgroundcolor='#eeeeee', fontsize = 14)
+    cl_text = ''
+    
+    
+    for cluster, n_nodes in sites_clusters[text[2].split(' ')[0].lower()].iteritems():
+        cl_text += str(n_nodes).ljust(4, ' ')+cluster.rjust(4)+' '+'\n'
+        diff_y -= 0.2
+    x,y = m(text[0]+diff_x, text[1]+diff_y)
+    
+    
+    plt.text(x, y, cl_text[:-2], color = '#222222', backgroundcolor='#EEEEEE', fontsize = 8)
 
 plt.savefig('g5k_map.png', dpi = 300, bbox_inches='tight') 
 
