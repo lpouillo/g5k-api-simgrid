@@ -1,0 +1,1812 @@
+[
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-1.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7f:d8", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecc:7fd8", 
+                "bridged": true, 
+                "ip": "172.16.18.1", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:11"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7f:d9", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-1-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:1755", 
+                "mountable": true, 
+                "ip": "172.18.18.1", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:17:55"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-1-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.1", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:b0:58", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-1", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-11"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-12"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-1", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-10.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:83:10", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecc:8310", 
+                "bridged": true, 
+                "ip": "172.16.18.10", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:20"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:83:11", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-10-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:1769", 
+                "mountable": true, 
+                "ip": "172.18.18.10", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:17:69"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-10-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.10", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:ad:df", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-10", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-10", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-10/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-10/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-13"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-14"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-2", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-2.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7f:da", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecc:7fda", 
+                "bridged": true, 
+                "ip": "172.16.18.2", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:12"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7f:db", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-2-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:1759", 
+                "mountable": true, 
+                "ip": "172.18.18.2", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:17:59"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-2-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:b0:59", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-2", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-11"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-12"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-1", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-3.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c6:a4", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecd:c6a4", 
+                "bridged": true, 
+                "ip": "172.16.18.3", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:13"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c6:a5", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-3-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:3d49", 
+                "mountable": true, 
+                "ip": "172.18.18.3", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:3d:49"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-3-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.3", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:b5:f6", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-3", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-13"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-14"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-2", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-4.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c0:ac", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecd:c0ac", 
+                "bridged": true, 
+                "ip": "172.16.18.4", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:14"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c0:ad", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-4-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:3d45", 
+                "mountable": true, 
+                "ip": "172.18.18.4", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:3d:45"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-4-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.4", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:b6:6c", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-4", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-4", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-4/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-4/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-13"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-14"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-2", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-5.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7e:0a", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecc:7e0a", 
+                "bridged": true, 
+                "ip": "172.16.18.5", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:15"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7e:0b", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-5-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:1465", 
+                "mountable": true, 
+                "ip": "172.18.18.5", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:14:65"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-5-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.5", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:af:61", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-5", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-5", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-5/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-5/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-5"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-6"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-1", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-6.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7a:bc", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecc:7abc", 
+                "bridged": true, 
+                "ip": "172.16.18.6", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:16"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:7a:bd", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-6-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:4265", 
+                "mountable": true, 
+                "ip": "172.18.18.6", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:42:65"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-6-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.6", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:ad:f2", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-6", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-6", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-6/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-6/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-5"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-1.grenoble.grid5000.fr", 
+                                "measure": "outlet-6"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-1", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-7.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c6:80", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecd:c680", 
+                "bridged": true, 
+                "ip": "172.16.18.7", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:17"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c6:81", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-7-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:3d41", 
+                "mountable": true, 
+                "ip": "172.18.18.7", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:3d:41"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-7-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.7", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:b5:e4", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-7", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-7", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-7/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-7/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-1"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-2"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-1", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-8.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c0:ae", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::230:48ff:fecd:c0ae", 
+                "bridged": true, 
+                "ip": "172.16.18.8", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:18"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cd:c0:af", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-8-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::230:48ff:ffcc:3d51", 
+                "mountable": true, 
+                "ip": "172.18.18.8", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:30:48:ff:ff:cc:3d:51"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-8-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.8", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:30:48:cc:b6:6d", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-8", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-8", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-8/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-8/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-1"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-2"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-1", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "Western Digital", 
+                "driver": "ahci", 
+                "rev": 2.0, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "WDC WD2502ABYS-0", 
+                "size": "251059544064B"
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": true, 
+                "network_address": "adonis-9.grenoble.grid5000.fr", 
+                "switch": "gw-grenoble", 
+                "driver": "igb", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:90:4c:e9:84", 
+                "version": "Device 10c9 (rev 01)", 
+                "ip6": "fe80::225:90ff:fe4c:e984", 
+                "bridged": true, 
+                "ip": "172.16.18.9", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "3:19"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:90:4c:e9:85", 
+                "version": "Device 10c9 (rev 01)", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "Mellanox", 
+                "network_address": "adonis-9-ib0.grenoble.grid5000.fr", 
+                "driver": "mlx4_core", 
+                "enabled": true, 
+                "interface": "InfiniBand", 
+                "rate": 40000000000, 
+                "version": "MT26428", 
+                "ip6": "fe80::225:90ff:ff2f:f149", 
+                "mountable": true, 
+                "ip": "172.18.18.9", 
+                "device": "ib0", 
+                "mounted": true, 
+                "guid": "20:00:55:00:41:80:00:00:00:00:00:00:00:25:90:ff:ff:2f:f1:49"
+            }, 
+            {
+                "management": true, 
+                "vendor": "Super Micro Computer Inc.", 
+                "network_address": "adonis-9-bmc.grenoble.grid5000.fr", 
+                "ip": "172.17.18.9", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:90:4b:bd:b1", 
+                "version": "1.15", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "adonis-9", 
+        "links": [
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-9", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-9/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/grenoble/clusters/adonis/nodes/adonis-9/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 25330180096
+        }, 
+        "bios": {
+            "release_date": "05/20/2010", 
+            "version": "R4222X80", 
+            "vendor": "American Megatrends Inc."
+        }, 
+        "chassis": {
+            "serial": "1234567890", 
+            "name": "bullx", 
+            "manufacturer": "Bull SAS"
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7139000000, 
+            "node_flops": 55510000000
+        }, 
+        "gpu": {
+            "gpu": true, 
+            "gpu_vendor": "Nvidia", 
+            "gpu_model": "Tesla-C1060", 
+            "gpu_count": 2
+        }, 
+        "sensors": {
+            "power": {
+                "available": true, 
+                "via": {
+                    "pdu": [
+                        [
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-13"
+                            }, 
+                            {
+                                "uid": "adonis-pdu-2.grenoble.grid5000.fr", 
+                                "measure": "outlet-14"
+                            }
+                        ], 
+                        [
+                            {
+                                "uid": "block-2", 
+                                "measure": "global"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 8388608, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz", 
+            "clock_speed": 2270000000, 
+            "version": "E5520", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }
+]

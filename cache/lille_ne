@@ -1,0 +1,563 @@
+[
+    {
+        "kind": "router", 
+        "snmp_community": "public", 
+        "uid": "gw-lille", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/network_equipments/gw-lille", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/network_equipments/gw-lille/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/network_equipments/gw-lille/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "lille", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 720000000000, 
+        "model": "cisco WS-C6506-E", 
+        "vlans": {
+            "vlan536": {
+                "addresses": [
+                    "193.51.183.177"
+                ]
+            }, 
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan541": {
+                "addresses": [
+                    "192.168.69.2"
+                ]
+            }, 
+            "vlan709": {
+                "addresses": [
+                    "10.9.64.0/18"
+                ], 
+                "name": "kavlan-9"
+            }, 
+            "vlan708": {
+                "addresses": [
+                    "10.9.0.0/18"
+                ], 
+                "name": "kavlan-8"
+            }, 
+            "vlan537": {
+                "addresses": [
+                    "172.16.223.254"
+                ]
+            }, 
+            "vlan705": {
+                "addresses": [
+                    "10.8.64.0/18"
+                ], 
+                "name": "kavlan-5"
+            }, 
+            "vlan704": {
+                "addresses": [
+                    "10.8.0.0/18"
+                ], 
+                "name": "kavlan-4"
+            }, 
+            "vlan707": {
+                "addresses": [
+                    "10.8.192.0/18"
+                ], 
+                "name": "kavlan-7"
+            }, 
+            "vlan706": {
+                "addresses": [
+                    "10.8.128.0/18"
+                ], 
+                "name": "kavlan-6"
+            }, 
+            "vlan701": {
+                "addresses": [
+                    "192.168.192.0/20"
+                ], 
+                "name": "kavlan-1"
+            }, 
+            "vlan703": {
+                "addresses": [
+                    "192.168.224.0/20"
+                ], 
+                "name": "kavlan-3"
+            }, 
+            "vlan702": {
+                "addresses": [
+                    "192.168.208.0/20"
+                ], 
+                "name": "kavlan-2"
+            }, 
+            "vlan712": {
+                "addresses": [
+                    "10.11.192.0/18"
+                ], 
+                "name": "kavlan-12"
+            }, 
+            "vlan101": {
+                "addresses": [
+                    "172.17.47.254"
+                ]
+            }, 
+            "vlan100": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.47.254"
+                ]
+            }, 
+            "vlan500": {
+                "addresses": [
+                    "192.168.4.18"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Te%LINECARD%/%PORT%", 
+                "kind": "virtual", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "renater-lille"
+                    }
+                ], 
+                "rate": 10000000000
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "chinqchint-1"
+                    }, 
+                    {
+                        "uid": "chinqchint-2"
+                    }, 
+                    {
+                        "uid": "chinqchint-3"
+                    }, 
+                    {
+                        "uid": "chinqchint-4"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "chinqchint-6"
+                    }, 
+                    {
+                        "uid": "chinqchint-7"
+                    }, 
+                    {
+                        "uid": "chinqchint-8"
+                    }, 
+                    {
+                        "uid": "chinqchint-9"
+                    }, 
+                    {
+                        "uid": "chinqchint-10"
+                    }, 
+                    {
+                        "uid": "chinqchint-11"
+                    }, 
+                    {
+                        "uid": "chinqchint-12"
+                    }, 
+                    {
+                        "uid": "chinqchint-13"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "rate": 1000000000, 
+                        "uid": "myrinet"
+                    }, 
+                    {
+                        "uid": "chinqchint-15"
+                    }, 
+                    {
+                        "uid": "chinqchint-16"
+                    }, 
+                    {
+                        "uid": "chinqchint-17"
+                    }, 
+                    {
+                        "uid": "chinqchint-18"
+                    }, 
+                    {
+                        "uid": "chinqchint-19"
+                    }, 
+                    {
+                        "uid": "chinqchint-20"
+                    }, 
+                    {
+                        "uid": "chinqchint-21"
+                    }, 
+                    {
+                        "uid": "chinqchint-22"
+                    }, 
+                    {
+                        "uid": "chinqchint-23"
+                    }, 
+                    {
+                        "uid": "chinqchint-24"
+                    }, 
+                    {
+                        "uid": "chinqchint-25"
+                    }, 
+                    {
+                        "uid": "chinqchint-26"
+                    }, 
+                    {
+                        "uid": "chinqchint-27"
+                    }, 
+                    {
+                        "uid": "chinqchint-28"
+                    }, 
+                    {
+                        "uid": "chinqchint-29"
+                    }, 
+                    {
+                        "uid": "chinqchint-30"
+                    }, 
+                    {
+                        "uid": "chinqchint-31"
+                    }, 
+                    {
+                        "uid": "chinqchint-32"
+                    }, 
+                    {
+                        "uid": "chinqchint-33"
+                    }, 
+                    {
+                        "uid": "chinqchint-34"
+                    }, 
+                    {
+                        "uid": "chinqchint-35"
+                    }, 
+                    {
+                        "uid": "chinqchint-36"
+                    }, 
+                    {
+                        "uid": "chinqchint-37"
+                    }, 
+                    {
+                        "uid": "chinqchint-38"
+                    }, 
+                    {
+                        "uid": "chinqchint-39"
+                    }, 
+                    {
+                        "uid": "chinqchint-40"
+                    }, 
+                    {
+                        "uid": "chinqchint-5"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "uid": "chimint-srv"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "caulier"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "flandres"
+                    }
+                ], 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "port": "eth1"
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "chinqchint-41"
+                    }, 
+                    {
+                        "uid": "chinqchint-42"
+                    }, 
+                    {
+                        "uid": "chinqchint-43"
+                    }, 
+                    {
+                        "uid": "chinqchint-44"
+                    }, 
+                    {
+                        "uid": "chinqchint-45"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "chimint-1"
+                    }, 
+                    {
+                        "uid": "chimint-19"
+                    }, 
+                    {
+                        "uid": "chimint-2"
+                    }, 
+                    {
+                        "uid": "chimint-5"
+                    }, 
+                    {
+                        "uid": "chimint-4"
+                    }, 
+                    {
+                        "uid": "chimint-6"
+                    }, 
+                    {
+                        "uid": "chimint-8"
+                    }, 
+                    {
+                        "uid": "chimint-7"
+                    }, 
+                    {
+                        "uid": "chimint-9"
+                    }, 
+                    {
+                        "uid": "chimint-10"
+                    }, 
+                    {
+                        "uid": "chimint-11"
+                    }, 
+                    {
+                        "uid": "chimint-12"
+                    }, 
+                    {
+                        "uid": "chimint-13"
+                    }, 
+                    {
+                        "uid": "chimint-14"
+                    }, 
+                    {
+                        "uid": "chimint-17"
+                    }, 
+                    {
+                        "uid": "chimint-16"
+                    }, 
+                    {
+                        "uid": "chimint-15"
+                    }, 
+                    {
+                        "uid": "chimint-18"
+                    }, 
+                    {
+                        "uid": "chirloute-2"
+                    }, 
+                    {
+                        "uid": "chirloute-4"
+                    }, 
+                    {
+                        "uid": "chimint-20"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "chirloute-1"
+                    }, 
+                    {
+                        "uid": "chirloute-3"
+                    }, 
+                    {
+                        "uid": "chirloute-6"
+                    }, 
+                    {
+                        "uid": "chirloute-8"
+                    }, 
+                    {
+                        "uid": "chirloute-5"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "chinqchint-46"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "jiminy"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "fives"
+                    }, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "tilt"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "zed"
+                    }
+                ], 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "port": "eth1"
+            }, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "port": "eth1", 
+                        "uid": "chirloute-7"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "chimint-srv2"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {}, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "interco-NR-Lille"
+                    }
+                ], 
+                "rate": 1000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "myrinet", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/network_equipments/myrinet", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/network_equipments/myrinet/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/network_equipments/myrinet/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "lille", 
+        "mtu": null, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": null, 
+        "model": "myricom", 
+        "vlans": {
+            "vlan103": {
+                "administrative": true, 
+                "addresses": [
+                    "172.18.47.200"
+                ]
+            }, 
+            "naming_pattern": "Vlan%VLANID%"
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "gw-lille"
+                    }
+                ], 
+                "rate": 1000000000
+            }
+        ]
+    }
+]

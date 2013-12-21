@@ -1,0 +1,2822 @@
+[
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-1.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d4:7f", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d47f", 
+                "bridged": true, 
+                "ip": "172.16.33.1", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/7"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d4:80", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-1-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.101", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d4:81", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-1", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "DQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-10.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d4:49", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d449", 
+                "bridged": true, 
+                "ip": "172.16.33.10", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/16"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d4:4a", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-10-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.110", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d4:4b", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-10", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-10", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-10/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-10/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "9QM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-11.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c9:9d", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c99d", 
+                "bridged": true, 
+                "ip": "172.16.33.11", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/17"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c9:9e", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-11-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.111", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c9:9f", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-11", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-11", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-11/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-11/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "BRM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-12.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:ea", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c621", 
+                "bridged": true, 
+                "ip": "172.16.33.12", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/18"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:eb", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-12-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.112", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:ec", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-12", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-12", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-12/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-12/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "BQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-13.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:71:f1:24", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c621", 
+                "bridged": true, 
+                "ip": "172.16.33.13", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/19"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:71:f1:25", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-13-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.113", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:71:f1:26", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-13", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-13", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-13/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-13/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "9RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-14.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:67", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d567", 
+                "bridged": true, 
+                "ip": "172.16.33.14", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/20"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:68", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-14-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.114", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:69", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-14", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-14", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-14/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-14/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "CQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-15.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d7:7a", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d77a", 
+                "bridged": true, 
+                "ip": "172.16.33.15", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/23"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d7:7b", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-15-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.115", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d7:7c", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-15", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-15", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-15/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-15/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "HQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-16.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:db", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d5db", 
+                "bridged": true, 
+                "ip": "172.16.33.16", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/22"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:dc", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-16-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.116", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:dd", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-16", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-16", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-16/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-16/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "JQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-17.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:f6:92", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:f692", 
+                "bridged": true, 
+                "ip": "172.16.33.17", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/21"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:f6:93", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-17-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.117", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:f6:94", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-17", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-17", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-17/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-17/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "8QM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-18.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d7:89", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d789", 
+                "bridged": true, 
+                "ip": "172.16.33.18", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/24"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d7:8a", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-18-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.118", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d7:8b", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-18", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-18", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-18/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-18/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "GQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-19.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c6:21", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c621", 
+                "bridged": true, 
+                "ip": "172.16.33.19", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/28"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c6:22", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-19-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.119", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c6:23", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-19", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-19", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-19/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-19/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "1RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-2.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:4f:4c", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:4f4c", 
+                "bridged": true, 
+                "ip": "172.16.33.2", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/9"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:4f:4d", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-2-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.102", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:4f:4e", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-2", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "8RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-20.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c3:d5", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c3d5", 
+                "bridged": true, 
+                "ip": "172.16.33.20", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/27"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c3:d6", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-20-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.120", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:c3:d7", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-20", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-20", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-20/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-20/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "7RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-3.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:4e:1e", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c621", 
+                "bridged": true, 
+                "ip": "172.16.33.3", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/8"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:4e:1f", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-3-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.103", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:4e:20", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-3", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "2RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-4.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:cc:89", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c621", 
+                "bridged": true, 
+                "ip": "172.16.33.4", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/11"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:cc:8a", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-4-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.104", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:cc:8b", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-4", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-4", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-4/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-4/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "3RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-5.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:cc:92", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:cc92", 
+                "bridged": true, 
+                "ip": "172.16.33.5", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/10"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:cc:93", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-5-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.105", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:70:cc:94", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-5", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-5", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-5/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-5/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "6RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-6.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:9e", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:d59e", 
+                "bridged": true, 
+                "ip": "172.16.33.6", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/12"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:9f", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-6-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.106", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:d5:a0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-6", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-6", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-6/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-6/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "FQM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-7.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:b3:44", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:b344", 
+                "bridged": true, 
+                "ip": "172.16.33.7", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/14"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:b3:45", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-7-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.107", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:b3:46", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-7", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-7", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-7/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-7/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "5RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-8.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:da:c3", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe72:dac3", 
+                "bridged": true, 
+                "ip": "172.16.33.8", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/13"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:da:c4", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-8-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.108", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:da:c5", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-8", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-8", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-8/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-8/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "CRM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "raid": "0", 
+                "driver": "megaraid_sas", 
+                "rev": 2.1, 
+                "interface": "SATA", 
+                "device": "sda", 
+                "vendor": "DELL", 
+                "model": "PERC H700", 
+                "size": 292326211584
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": true, 
+                "network_address": "chimint-9.lille.grid5000.fr", 
+                "switch": "gw-lille", 
+                "driver": "bnx2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:cb:e3", 
+                "version": "NetXtreme II BCM5716", 
+                "ip6": "fe80::862b:2bff:fe70:c621", 
+                "bridged": true, 
+                "ip": "172.16.33.9", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Gi3/15"
+            }, 
+            {
+                "management": false, 
+                "vendor": "Broadcom", 
+                "mountable": false, 
+                "driver": "bnx2", 
+                "enabled": false, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:cb:e4", 
+                "version": "NetXtreme II BCM5716", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "switch_port": null, 
+                "network_address": "chimint-9-impi.lille.grid5000.fr", 
+                "switch": null, 
+                "ip": "172.17.33.109", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "84:2b:2b:72:cb:e5", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "chimint-9", 
+        "links": [
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-9", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-9/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/lille/clusters/chimint/nodes/chimint-9/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 16850722816
+        }, 
+        "bios": {
+            "release_date": "10/22/2010", 
+            "version": "1.5.3", 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "4RM1Z4J", 
+            "name": "PowerEdge R410", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 8
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 7456000000, 
+            "node_flops": 55610000000
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 12582912, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+            "clock_speed": 2400000000, 
+            "version": "E5620", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }
+]

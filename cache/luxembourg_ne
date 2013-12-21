@@ -1,0 +1,1076 @@
+[
+    {
+        "kind": "router", 
+        "snmp_community": "public", 
+        "uid": "gw-luxembourg", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/gw-luxembourg", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/gw-luxembourg/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/gw-luxembourg/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "luxembourg", 
+        "mtu": 9216, 
+        "channels": {
+            "lacp1": [
+                {
+                    "linecard": 1, 
+                    "port": 35
+                }, 
+                {
+                    "linecard": 2, 
+                    "port": 44
+                }
+            ], 
+            "naming_pattern": "Po%CHANNELID%", 
+            "lacp3": [
+                {
+                    "linecard": 1, 
+                    "port": 23
+                }, 
+                {
+                    "linecard": 2, 
+                    "port": 46
+                }
+            ], 
+            "lacp2": [
+                {
+                    "linecard": 1, 
+                    "port": 36
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 40
+                }
+            ], 
+            "lacp4": [
+                {
+                    "linecard": 3, 
+                    "port": 1
+                }, 
+                {
+                    "linecard": 3, 
+                    "port": 2
+                }
+            ]
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 720000000000, 
+        "model": "cisco WS-C6506-E", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan720": {
+                "addresses": [
+                    "10.43.192.0/18"
+                ], 
+                "name": "kavlan-20"
+            }, 
+            "vlan709": {
+                "addresses": [
+                    "10.41.64.0/18"
+                ], 
+                "name": "kavlan-9"
+            }, 
+            "vlan708": {
+                "addresses": [
+                    "10.41.0.0/18"
+                ], 
+                "name": "kavlan-8"
+            }, 
+            "vlan705": {
+                "addresses": [
+                    "10.40.64.0/18"
+                ], 
+                "name": "kavlan-5"
+            }, 
+            "vlan704": {
+                "addresses": [
+                    "10.40.0.0/18"
+                ], 
+                "name": "kavlan-4"
+            }, 
+            "vlan707": {
+                "addresses": [
+                    "10.40.192.0/18"
+                ], 
+                "name": "kavlan-7"
+            }, 
+            "vlan706": {
+                "addresses": [
+                    "10.40.128.0/18"
+                ], 
+                "name": "kavlan-6"
+            }, 
+            "vlan701": {
+                "addresses": [
+                    "192.168.192.0/20"
+                ], 
+                "name": "kavlan-1"
+            }, 
+            "vlan703": {
+                "addresses": [
+                    "192.168.224.0/20"
+                ], 
+                "name": "kavlan-3"
+            }, 
+            "vlan702": {
+                "addresses": [
+                    "192.168.208.0/20"
+                ], 
+                "name": "kavlan-2"
+            }, 
+            "vlan103": {
+                "addresses": [
+                    "192.168.69.1"
+                ]
+            }, 
+            "vlan101": {
+                "administrative": true, 
+                "addresses": [
+                    "172.17.191.254"
+                ]
+            }, 
+            "vlan100": {
+                "addresses": [
+                    "172.16.191.254"
+                ]
+            }, 
+            "vlan50": {
+                "addresses": [
+                    "192.168.15.254"
+                ]
+            }, 
+            "vlan500": {
+                "addresses": [
+                    "192.168.4.21"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "hera"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-1"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-2"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-3"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-4"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-5"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-6"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-7"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-8"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-9"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-10"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-11"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "cronos"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "zeus"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "uid": "cronos"
+                    }, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "zeus"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-1"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-2"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-3"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-4"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-5"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-6"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-7"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-8"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-9"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-10"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-11"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-12"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-13"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-14"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-15"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-16"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-17"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-18"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-19"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-20"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-21"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "granduc-22"
+                    }, 
+                    {}, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-12"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-13"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-14"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-15"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-16"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-17"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-18"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-19"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-20"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-21"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "granduc-22"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "cronos"
+                    }, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "hera"
+                    }, 
+                    {}, 
+                    {}
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Te%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {
+                        "port": "Ethernet1/30", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "port": "Ethernet1/32", 
+                        "uid": "ul-grid5000-sw02"
+                    }
+                ], 
+                "rate": 10000000000
+            }, 
+            {}, 
+            {
+                "backplane_bps": 40000000000, 
+                "naming_pattern": "Te%LINECARD%/%PORT%", 
+                "kind": "virtual", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "rate": 10000000000, 
+                        "uid": "renater-luxembourg"
+                    }
+                ], 
+                "rate": 1000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "mxl1", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/mxl1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/mxl1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/mxl1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {
+            "use_cacti": "yes"
+        }, 
+        "site": "luxembourg", 
+        "mtu": 1554, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%", 
+            "lacp5": [
+                {
+                    "linecard": 1, 
+                    "port": 33
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 34
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 35
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 36
+                }
+            ]
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 1407374880000, 
+        "model": "Force10 MXL", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan101": {
+                "administrative": true, 
+                "addresses": [
+                    "172.17.191.251"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "Te%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-1"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-2"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-3"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-4"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-5"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-6"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-7"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-8"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-9"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-10"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-11"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-12"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-13"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-14"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-15"
+                    }, 
+                    {
+                        "port": "eth0", 
+                        "uid": "petitprince-16"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/33", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/34", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/35", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/36", 
+                        "uid": "ul-grid5000-sw02"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "mxl2", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/mxl2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/mxl2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/mxl2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {
+            "use_cacti": "yes"
+        }, 
+        "site": "luxembourg", 
+        "mtu": 1554, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%", 
+            "lacp6": [
+                {
+                    "linecard": 1, 
+                    "port": 33
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 34
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 35
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 36
+                }
+            ]
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 1407374880000, 
+        "model": "Force10 MXL", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan101": {
+                "administrative": true, 
+                "addresses": [
+                    "172.17.191.252"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "Te%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-1"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-2"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-3"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-4"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-5"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-6"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-7"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-8"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-9"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-10"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-11"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-12"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-13"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-14"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-15"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "petitprince-16"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/37", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/38", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/39", 
+                        "uid": "ul-grid5000-sw02"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Ethernet1/40", 
+                        "uid": "ul-grid5000-sw02"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "ul-grid5000-sw02", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/ul-grid5000-sw02", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/ul-grid5000-sw02/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/network_equipments/ul-grid5000-sw02/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {
+            "use_cacti": "yes"
+        }, 
+        "site": "luxembourg", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%", 
+            "lacp5": [
+                {
+                    "linecard": 1, 
+                    "port": 33
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 34
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 35
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 36
+                }
+            ], 
+            "lacp6": [
+                {
+                    "linecard": 1, 
+                    "port": 37
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 38
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 39
+                }, 
+                {
+                    "linecard": 1, 
+                    "port": 40
+                }
+            ]
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 1040000000000, 
+        "model": "cisco N5K-C5020P-BF", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan101": {
+                "administrative": true, 
+                "addresses": [
+                    "172.17.191.253"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {
+                "naming_pattern": "Ethernet%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-1"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-2"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-3"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-4"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-5"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-6"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-7"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-8"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-9"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-10"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-11"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-12"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-13"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-14"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-15"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-16"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-17"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-18"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-19"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-20"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-21"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "granduc-22"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "router", 
+                        "port": "Te3/1", 
+                        "uid": "gw-luxembourg"
+                    }, 
+                    {}, 
+                    {
+                        "kind": "router", 
+                        "port": "Te3/2", 
+                        "uid": "gw-luxembourg"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/33", 
+                        "uid": "mxl1"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/34", 
+                        "uid": "mxl1"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/35", 
+                        "uid": "mxl1"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/36", 
+                        "uid": "mxl1"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/33", 
+                        "uid": "mxl2"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/34", 
+                        "uid": "mxl2"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/35", 
+                        "uid": "mxl2"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "Te0/36", 
+                        "uid": "mxl2"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }
+]

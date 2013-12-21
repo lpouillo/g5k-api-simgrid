@@ -1,0 +1,706 @@
+[
+    {
+        "storage_devices": [
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sda", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }, 
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sdb", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": true, 
+                "network_address": "graphite-1.nancy.grid5000.fr", 
+                "switch": "gw", 
+                "driver": "ixgbe", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:68", 
+                "version": "82599EB", 
+                "ip6": "fe80::baca:3aff:fe69:1268", 
+                "bridged": true, 
+                "ip": "172.16.68.1", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "F1"
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "ixgbe", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:6a", 
+                "version": "82599EB", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:6c", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth2", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:6d", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth3", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "vendor": "DELL", 
+                "switch_port": "1/0/41", 
+                "network_address": "graphite-1-bmc.nancy.grid5000.fr", 
+                "switch": "sgraphene3-ipmi", 
+                "ip": "172.17.68.1", 
+                "enabled": true, 
+                "rate": 100000000, 
+                "interface": "Ethernet", 
+                "mac": "f0:1f:af:e1:9a:0c", 
+                "version": "IDRAC7", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "graphite-1", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 270991937536
+        }, 
+        "bios": {
+            "release_date": "08/29/2013", 
+            "version": 2.0, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "27Q7NZ1", 
+            "name": "PowerEdge R720", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 16
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 0, 
+            "node_flops": 0
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 20971520, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2650", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sda", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }, 
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sdb", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": true, 
+                "network_address": "graphite-2.nancy.grid5000.fr", 
+                "switch": "gw", 
+                "driver": "ixgbe", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:1e:88", 
+                "version": "82599EB", 
+                "ip6": "fe80::baca:3aff:fe69:1e88", 
+                "bridged": true, 
+                "ip": "172.16.68.2", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "F2"
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "ixgbe", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:1e:8a", 
+                "version": "82599EB", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:1e:8c", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth2", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:1e:8d", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth3", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "vendor": "DELL", 
+                "switch_port": "1/0/43", 
+                "network_address": "graphite-2-bmc.nancy.grid5000.fr", 
+                "switch": "sgraphene3-ipmi", 
+                "ip": "172.17.68.2", 
+                "enabled": true, 
+                "rate": 100000000, 
+                "interface": "Ethernet", 
+                "mac": "f0:1f:af:e1:97:56", 
+                "version": "IDRAC7", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "graphite-2", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 270991937536
+        }, 
+        "bios": {
+            "release_date": "08/29/2013", 
+            "version": 2.0, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "B6Q7NZ1", 
+            "name": "PowerEdge R720", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 16
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 0, 
+            "node_flops": 0
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 20971520, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2650", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sda", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }, 
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sdb", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": true, 
+                "network_address": "graphite-3.nancy.grid5000.fr", 
+                "switch": "gw", 
+                "driver": "ixgbe", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:11:d8", 
+                "version": "82599EB", 
+                "ip6": "fe80::baca:3aff:fe69:11d8", 
+                "bridged": true, 
+                "ip": "172.16.68.3", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "F3"
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "ixgbe", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:11:da", 
+                "version": "82599EB", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:11:dc", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth2", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:11:dd", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth3", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "vendor": "DELL", 
+                "switch_port": "1/0/45", 
+                "network_address": "graphite-3-bmc.nancy.grid5000.fr", 
+                "switch": "sgraphene3-ipmi", 
+                "ip": "172.17.68.3", 
+                "enabled": true, 
+                "rate": 100000000, 
+                "interface": "Ethernet", 
+                "mac": "f0:1f:af:df:5b:9c", 
+                "version": "IDRAC7", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "graphite-3", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 270991937536
+        }, 
+        "bios": {
+            "release_date": "08/29/2013", 
+            "version": 2.0, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "G5Q7NZ1", 
+            "name": "PowerEdge R720", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 16
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 0, 
+            "node_flops": 0
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 20971520, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2650", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sda", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }, 
+            {
+                "vendor": null, 
+                "driver": "megaraid_sas", 
+                "rev": "DL10", 
+                "interface": "SATA II", 
+                "device": "sdb", 
+                "model": "INTEL SSDSC2BB30", 
+                "size": 300069052416
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": true, 
+                "network_address": "graphite-4.nancy.grid5000.fr", 
+                "switch": "gw", 
+                "driver": "ixgbe", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:40", 
+                "version": "82599EB", 
+                "ip6": "fe80::baca:3aff:fe69:1240", 
+                "bridged": true, 
+                "ip": "172.16.68.4", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "F4"
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "ixgbe", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:42", 
+                "version": "82599EB", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:44", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth2", 
+                "mounted": false
+            }, 
+            {
+                "management": false, 
+                "vendor": "intel", 
+                "mountable": false, 
+                "driver": "igb", 
+                "enabled": false, 
+                "rate": null, 
+                "interface": "Ethernet", 
+                "mac": "b8:ca:3a:69:12:45", 
+                "version": "I350", 
+                "bridged": false, 
+                "device": "eth3", 
+                "mounted": false
+            }, 
+            {
+                "management": true, 
+                "vendor": "DELL", 
+                "switch_port": "1/0/47", 
+                "network_address": "graphite-4-bmc.nancy.grid5000.fr", 
+                "switch": "sgraphene3-ipmi", 
+                "ip": "172.17.68.4", 
+                "enabled": true, 
+                "rate": 100000000, 
+                "interface": "Ethernet", 
+                "mac": "f0:1f:af:e0:3e:7f", 
+                "version": "IDRAC7", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Squeeze", 
+            "kernel": "2.6.32-5-amd64", 
+            "version": "6.0.6", 
+            "name": "debian"
+        }, 
+        "uid": "graphite-4", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-4", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-4/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/clusters/graphite/nodes/graphite-4/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 270991937536
+        }, 
+        "bios": {
+            "release_date": "08/29/2013", 
+            "version": 2.0, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "66Q7NZ1", 
+            "name": "PowerEdge R720", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 16
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "performance": {
+            "core_flops": 0, 
+            "node_flops": 0
+        }, 
+        "gpu": {
+            "gpu": false
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 20971520, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2650", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }
+]

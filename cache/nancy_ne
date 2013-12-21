@@ -1,0 +1,2583 @@
+[
+    {
+        "kind": "router", 
+        "snmp_community": "public", 
+        "uid": "gw-nancy", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/gw-nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/gw-nancy/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/gw-nancy/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9220, 
+        "channels": {
+            "lacp1": [
+                {
+                    "linecard": 1, 
+                    "port": 24
+                }
+            ], 
+            "naming_pattern": "Po%CHANNELID%", 
+            "lacp3": [
+                {
+                    "linecard": 1, 
+                    "port": 23
+                }
+            ], 
+            "lacp2": [
+                {
+                    "linecard": 1, 
+                    "port": 9
+                }
+            ], 
+            "lacp4": [
+                {
+                    "linecard": 1, 
+                    "port": 17
+                }
+            ]
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 346000000000, 
+        "model": "HP Procurve 5406zl J8697A", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan709": {
+                "addresses": [
+                    "10.17.64.0/18"
+                ], 
+                "name": "kavlan-9"
+            }, 
+            "vlan708": {
+                "addresses": [
+                    "10.17.0.0/18"
+                ], 
+                "name": "kavlan-8"
+            }, 
+            "vlan705": {
+                "addresses": [
+                    "10.16.64.0/18"
+                ], 
+                "name": "kavlan-5"
+            }, 
+            "vlan704": {
+                "addresses": [
+                    "10.16.0.0/18"
+                ], 
+                "name": "kavlan-4"
+            }, 
+            "vlan707": {
+                "addresses": [
+                    "10.16.192.0/18"
+                ], 
+                "name": "kavlan-7"
+            }, 
+            "vlan706": {
+                "addresses": [
+                    "10.16.128.0/18"
+                ], 
+                "name": "kavlan-6"
+            }, 
+            "vlan701": {
+                "addresses": [
+                    "192.168.192.0/20"
+                ], 
+                "name": "kavlan-1"
+            }, 
+            "vlan703": {
+                "addresses": [
+                    "192.168.224.0/20"
+                ], 
+                "name": "kavlan-3"
+            }, 
+            "vlan702": {
+                "addresses": [
+                    "192.168.208.0/20"
+                ], 
+                "name": "kavlan-2"
+            }, 
+            "vlan714": {
+                "addresses": [
+                    "10.19.192.0/18"
+                ], 
+                "name": "kavlan-14"
+            }, 
+            "vlan101": {
+                "addresses": [
+                    "172.17.79.254"
+                ]
+            }, 
+            "vlan100": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.254"
+                ]
+            }, 
+            "vlan500": {
+                "addresses": [
+                    "192.168.4.14"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {
+                "naming_pattern": "%LINECARD:A%%PORT%", 
+                "kind": "other", 
+                "rate": 1000000000, 
+                "backplane_bps": 14400000000, 
+                "model": "J8702A", 
+                "ports": [
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgrapheneib"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "bmc", 
+                        "uid": "fgriffon2"
+                    }, 
+                    {
+                        "kind": "virtual", 
+                        "port": "stalc1-ipmi", 
+                        "uid": "TALC-adm"
+                    }, 
+                    {
+                        "kind": "switch", 
+                        "port": "stalc1", 
+                        "uid": "stalc1"
+                    }, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgriffonib"
+                    }, 
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "grog"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "grog"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "bmc", 
+                        "uid": "fgriffon1"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "fgriffon1"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "fgrelon2"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgraphene1-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgraphene2-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgraphene3-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgraphene4-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "fgrelon2"
+                    }, 
+                    {
+                        "kind": "virtual", 
+                        "uid": "LORIA"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgriffon2-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgriffon1-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "uid": "sgriffon3-ipmi"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth0", 
+                        "uid": "fgrelon1"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "fgriffon1"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth1", 
+                        "uid": "fgrelon1"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "%LINECARD:B%%PORT%", 
+                "kind": "switch", 
+                "rate": 10000000000, 
+                "backplane_bps": 14400000000, 
+                "model": "J8708A", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "sgriffon1"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "sgriffon3"
+                    }, 
+                    {
+                        "uid": "sgriffon2"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "%LINECARD:C%%PORT%", 
+                "kind": "switch", 
+                "rate": 10000000000, 
+                "backplane_bps": 14400000000, 
+                "model": "J8708A", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "sgraphene1"
+                    }, 
+                    {
+                        "uid": "sgraphene2"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "sgraphene4"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "%LINECARD:D%%PORT%", 
+                "kind": "switch", 
+                "rate": 1000000000, 
+                "backplane_bps": 14400000000, 
+                "model": "J8708A", 
+                "ports": [
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "uid": "fgriffon1"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "uid": "fgriffon2"
+                    }, 
+                    {
+                        "uid": "sgrelon1"
+                    }, 
+                    {
+                        "uid": "sgraphene3"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "%LINECARD:E%%PORT%", 
+                "kind": "virtual", 
+                "rate": 10000000000, 
+                "backplane_bps": 14400000000, 
+                "model": "J8707A", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "kind": "virtual", 
+                        "uid": "renater-nancy"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "%LINECARD:F%%PORT%", 
+                "kind": "virtual", 
+                "rate": 10000000000, 
+                "backplane_bps": 14400000000, 
+                "model": "J9538A", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "graphite-1"
+                    }, 
+                    {
+                        "uid": "graphite-2"
+                    }, 
+                    {
+                        "uid": "graphite-3"
+                    }, 
+                    {
+                        "uid": "graphite-4"
+                    }, 
+                    {
+                        "uid": "srv"
+                    }, 
+                    {
+                        "uid": "srv-data"
+                    }
+                ]
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgraphene1", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4510G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.201"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "graphene-2"
+                    }, 
+                    {
+                        "uid": "graphene-1"
+                    }, 
+                    {
+                        "uid": "graphene-4"
+                    }, 
+                    {
+                        "uid": "graphene-3"
+                    }, 
+                    {
+                        "uid": "graphene-6"
+                    }, 
+                    {
+                        "uid": "graphene-5"
+                    }, 
+                    {
+                        "uid": "graphene-10"
+                    }, 
+                    {
+                        "uid": "graphene-7"
+                    }, 
+                    {
+                        "uid": "graphene-12"
+                    }, 
+                    {
+                        "uid": "graphene-11"
+                    }, 
+                    {
+                        "uid": "graphene-9"
+                    }, 
+                    {
+                        "uid": "graphene-8"
+                    }, 
+                    {
+                        "uid": "graphene-14"
+                    }, 
+                    {
+                        "uid": "graphene-13"
+                    }, 
+                    {
+                        "uid": "graphene-16"
+                    }, 
+                    {
+                        "uid": "graphene-15"
+                    }, 
+                    {
+                        "uid": "graphene-18"
+                    }, 
+                    {
+                        "uid": "graphene-17"
+                    }, 
+                    {
+                        "uid": "graphene-20"
+                    }, 
+                    {
+                        "uid": "graphene-19"
+                    }, 
+                    {
+                        "uid": "graphene-22"
+                    }, 
+                    {
+                        "uid": "graphene-21"
+                    }, 
+                    {
+                        "uid": "graphene-24"
+                    }, 
+                    {
+                        "uid": "graphene-23"
+                    }, 
+                    {
+                        "uid": "graphene-26"
+                    }, 
+                    {
+                        "uid": "graphene-25"
+                    }, 
+                    {
+                        "uid": "graphene-28"
+                    }, 
+                    {
+                        "uid": "graphene-27"
+                    }, 
+                    {
+                        "uid": "graphene-30"
+                    }, 
+                    {
+                        "uid": "graphene-29"
+                    }, 
+                    {
+                        "uid": "graphene-32"
+                    }, 
+                    {
+                        "uid": "graphene-31"
+                    }, 
+                    {
+                        "uid": "graphene-34"
+                    }, 
+                    {
+                        "uid": "graphene-33"
+                    }, 
+                    {
+                        "uid": "graphene-36"
+                    }, 
+                    {
+                        "uid": "graphene-35"
+                    }, 
+                    {
+                        "uid": "graphene-38"
+                    }, 
+                    {
+                        "uid": "graphene-37"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "graphene-39"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgraphene2", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4510G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.202"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "graphene-40"
+                    }, 
+                    {
+                        "uid": "graphene-41"
+                    }, 
+                    {
+                        "uid": "graphene-42"
+                    }, 
+                    {
+                        "uid": "graphene-43"
+                    }, 
+                    {
+                        "uid": "graphene-44"
+                    }, 
+                    {
+                        "uid": "graphene-45"
+                    }, 
+                    {
+                        "uid": "graphene-46"
+                    }, 
+                    {
+                        "uid": "graphene-47"
+                    }, 
+                    {
+                        "uid": "graphene-48"
+                    }, 
+                    {
+                        "uid": "graphene-49"
+                    }, 
+                    {
+                        "uid": "graphene-50"
+                    }, 
+                    {
+                        "uid": "graphene-51"
+                    }, 
+                    {
+                        "uid": "graphene-52"
+                    }, 
+                    {
+                        "uid": "graphene-53"
+                    }, 
+                    {
+                        "uid": "graphene-54"
+                    }, 
+                    {
+                        "uid": "graphene-55"
+                    }, 
+                    {
+                        "uid": "graphene-56"
+                    }, 
+                    {
+                        "uid": "graphene-57"
+                    }, 
+                    {
+                        "uid": "graphene-58"
+                    }, 
+                    {
+                        "uid": "graphene-59"
+                    }, 
+                    {
+                        "uid": "graphene-60"
+                    }, 
+                    {
+                        "uid": "graphene-61"
+                    }, 
+                    {
+                        "uid": "graphene-62"
+                    }, 
+                    {
+                        "uid": "graphene-63"
+                    }, 
+                    {
+                        "uid": "graphene-64"
+                    }, 
+                    {
+                        "uid": "graphene-65"
+                    }, 
+                    {
+                        "uid": "graphene-66"
+                    }, 
+                    {
+                        "uid": "graphene-67"
+                    }, 
+                    {
+                        "uid": "graphene-68"
+                    }, 
+                    {
+                        "uid": "graphene-69"
+                    }, 
+                    {
+                        "uid": "graphene-70"
+                    }, 
+                    {
+                        "uid": "graphene-71"
+                    }, 
+                    {
+                        "uid": "graphene-72"
+                    }, 
+                    {
+                        "uid": "graphene-73"
+                    }, 
+                    {
+                        "uid": "graphene-74"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgraphene3", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4510G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.203"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "graphene-76"
+                    }, 
+                    {
+                        "uid": "graphene-75"
+                    }, 
+                    {
+                        "uid": "graphene-78"
+                    }, 
+                    {
+                        "uid": "graphene-77"
+                    }, 
+                    {
+                        "uid": "graphene-80"
+                    }, 
+                    {
+                        "uid": "graphene-79"
+                    }, 
+                    {
+                        "uid": "graphene-82"
+                    }, 
+                    {
+                        "uid": "graphene-81"
+                    }, 
+                    {
+                        "uid": "graphene-84"
+                    }, 
+                    {
+                        "uid": "graphene-83"
+                    }, 
+                    {
+                        "uid": "graphene-86"
+                    }, 
+                    {
+                        "uid": "graphene-85"
+                    }, 
+                    {
+                        "uid": "graphene-88"
+                    }, 
+                    {
+                        "uid": "graphene-87"
+                    }, 
+                    {
+                        "uid": "graphene-90"
+                    }, 
+                    {
+                        "uid": "graphene-89"
+                    }, 
+                    {
+                        "uid": "graphene-92"
+                    }, 
+                    {
+                        "uid": "graphene-91"
+                    }, 
+                    {
+                        "uid": "graphene-94"
+                    }, 
+                    {
+                        "uid": "graphene-93"
+                    }, 
+                    {
+                        "uid": "graphene-96"
+                    }, 
+                    {
+                        "uid": "graphene-95"
+                    }, 
+                    {
+                        "uid": "graphene-98"
+                    }, 
+                    {
+                        "uid": "graphene-97"
+                    }, 
+                    {
+                        "uid": "graphene-100"
+                    }, 
+                    {
+                        "uid": "graphene-99"
+                    }, 
+                    {
+                        "uid": "graphene-102"
+                    }, 
+                    {
+                        "uid": "graphene-101"
+                    }, 
+                    {
+                        "uid": "graphene-104"
+                    }, 
+                    {
+                        "uid": "graphene-103"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgraphene4", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene4", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene4/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgraphene4/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4510G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.204"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "graphene-105"
+                    }, 
+                    {
+                        "uid": "graphene-106"
+                    }, 
+                    {
+                        "uid": "graphene-107"
+                    }, 
+                    {
+                        "uid": "graphene-108"
+                    }, 
+                    {
+                        "uid": "graphene-109"
+                    }, 
+                    {
+                        "uid": "graphene-110"
+                    }, 
+                    {
+                        "uid": "graphene-111"
+                    }, 
+                    {
+                        "uid": "graphene-112"
+                    }, 
+                    {
+                        "uid": "graphene-113"
+                    }, 
+                    {
+                        "uid": "graphene-114"
+                    }, 
+                    {
+                        "uid": "graphene-115"
+                    }, 
+                    {
+                        "uid": "graphene-116"
+                    }, 
+                    {
+                        "uid": "graphene-117"
+                    }, 
+                    {
+                        "uid": "graphene-118"
+                    }, 
+                    {
+                        "uid": "graphene-119"
+                    }, 
+                    {
+                        "uid": "graphene-120"
+                    }, 
+                    {
+                        "uid": "graphene-121"
+                    }, 
+                    {
+                        "uid": "graphene-122"
+                    }, 
+                    {
+                        "uid": "graphene-123"
+                    }, 
+                    {
+                        "uid": "graphene-124"
+                    }, 
+                    {
+                        "uid": "graphene-125"
+                    }, 
+                    {
+                        "uid": "graphene-126"
+                    }, 
+                    {
+                        "uid": "graphene-127"
+                    }, 
+                    {
+                        "uid": "graphene-128"
+                    }, 
+                    {
+                        "uid": "graphene-129"
+                    }, 
+                    {
+                        "uid": "graphene-130"
+                    }, 
+                    {
+                        "uid": "graphene-131"
+                    }, 
+                    {
+                        "uid": "graphene-132"
+                    }, 
+                    {
+                        "uid": "graphene-133"
+                    }, 
+                    {
+                        "uid": "graphene-134"
+                    }, 
+                    {
+                        "uid": "graphene-135"
+                    }, 
+                    {
+                        "uid": "graphene-136"
+                    }, 
+                    {
+                        "uid": "graphene-137"
+                    }, 
+                    {
+                        "uid": "graphene-138"
+                    }, 
+                    {
+                        "uid": "graphene-139"
+                    }, 
+                    {
+                        "uid": "graphene-140"
+                    }, 
+                    {
+                        "uid": "graphene-141"
+                    }, 
+                    {
+                        "uid": "graphene-142"
+                    }, 
+                    {
+                        "uid": "graphene-143"
+                    }, 
+                    {
+                        "uid": "graphene-144"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgrapheneib", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgrapheneib", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgrapheneib/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgrapheneib/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {
+            "use_cacti": "no"
+        }, 
+        "site": "nancy", 
+        "mtu": null, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": null, 
+        "model": "Infiniband", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%"
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {
+                "naming_pattern": "%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "sgriffonib"
+                    }
+                ], 
+                "rate": 20000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgrelon1", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgrelon1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgrelon1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgrelon1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": null, 
+        "channels": {
+            "lacp1": [
+                {
+                    "linecard": 1, 
+                    "port": 4
+                }
+            ], 
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 173000000000, 
+        "model": "HP Procurve 3500yl-48G J8693A", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.228"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "interface%%PORT%", 
+                "kind": "other", 
+                "model": "J8693A", 
+                "rate": 1000000000, 
+                "ports": [
+                    {}, 
+                    {
+                        "port": "eth0", 
+                        "uid": "storage5k"
+                    }, 
+                    {
+                        "port": "eth1", 
+                        "uid": "storage5k"
+                    }, 
+                    {
+                        "port": "eth2", 
+                        "uid": "storage5k"
+                    }, 
+                    {
+                        "port": "eth3", 
+                        "uid": "storage5k"
+                    }, 
+                    {
+                        "port": "asm", 
+                        "uid": "storage5k"
+                    }, 
+                    {
+                        "port": "bmc", 
+                        "uid": "storage5k"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "%LINECARD:A%%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgriffon1", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500g", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.205"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "griffon-1"
+                    }, 
+                    {
+                        "uid": "griffon-2"
+                    }, 
+                    {
+                        "uid": "griffon-3"
+                    }, 
+                    {
+                        "uid": "griffon-4"
+                    }, 
+                    {
+                        "uid": "griffon-5"
+                    }, 
+                    {
+                        "uid": "griffon-6"
+                    }, 
+                    {
+                        "uid": "griffon-7"
+                    }, 
+                    {
+                        "uid": "griffon-8"
+                    }, 
+                    {
+                        "uid": "griffon-10"
+                    }, 
+                    {
+                        "uid": "griffon-9"
+                    }, 
+                    {
+                        "uid": "griffon-58"
+                    }, 
+                    {
+                        "uid": "griffon-59"
+                    }, 
+                    {
+                        "uid": "griffon-60"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "griffon-11"
+                    }, 
+                    {
+                        "uid": "griffon-12"
+                    }, 
+                    {
+                        "uid": "griffon-13"
+                    }, 
+                    {
+                        "uid": "griffon-14"
+                    }, 
+                    {
+                        "uid": "griffon-15"
+                    }, 
+                    {
+                        "uid": "griffon-16"
+                    }, 
+                    {
+                        "uid": "griffon-17"
+                    }, 
+                    {
+                        "uid": "griffon-18"
+                    }, 
+                    {
+                        "uid": "griffon-19"
+                    }, 
+                    {
+                        "uid": "griffon-20"
+                    }, 
+                    {
+                        "uid": "griffon-21"
+                    }, 
+                    {
+                        "uid": "griffon-22"
+                    }, 
+                    {
+                        "uid": "griffon-23"
+                    }, 
+                    {
+                        "uid": "griffon-24"
+                    }, 
+                    {
+                        "uid": "griffon-25"
+                    }, 
+                    {
+                        "uid": "griffon-26"
+                    }, 
+                    {
+                        "uid": "griffon-27"
+                    }, 
+                    {
+                        "uid": "griffon-28"
+                    }, 
+                    {
+                        "uid": "griffon-29"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgriffon2", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500g", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.206"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "griffon-30"
+                    }, 
+                    {
+                        "uid": "griffon-31"
+                    }, 
+                    {
+                        "uid": "griffon-32"
+                    }, 
+                    {
+                        "uid": "griffon-33"
+                    }, 
+                    {
+                        "uid": "griffon-34"
+                    }, 
+                    {
+                        "uid": "griffon-35"
+                    }, 
+                    {
+                        "uid": "griffon-36"
+                    }, 
+                    {
+                        "uid": "griffon-37"
+                    }, 
+                    {
+                        "uid": "griffon-38"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "griffon-39"
+                    }, 
+                    {
+                        "uid": "griffon-40"
+                    }, 
+                    {
+                        "uid": "griffon-41"
+                    }, 
+                    {
+                        "uid": "griffon-42"
+                    }, 
+                    {
+                        "uid": "griffon-43"
+                    }, 
+                    {
+                        "uid": "griffon-44"
+                    }, 
+                    {
+                        "uid": "griffon-45"
+                    }, 
+                    {
+                        "uid": "griffon-46"
+                    }, 
+                    {
+                        "uid": "griffon-47"
+                    }, 
+                    {
+                        "uid": "griffon-48"
+                    }, 
+                    {
+                        "uid": "griffon-49"
+                    }, 
+                    {
+                        "uid": "griffon-51"
+                    }, 
+                    {
+                        "uid": "griffon-50"
+                    }, 
+                    {
+                        "uid": "griffon-52"
+                    }, 
+                    {
+                        "uid": "griffon-53"
+                    }, 
+                    {
+                        "uid": "griffon-54"
+                    }, 
+                    {
+                        "uid": "griffon-55"
+                    }, 
+                    {
+                        "uid": "griffon-56"
+                    }, 
+                    {
+                        "uid": "griffon-57"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgriffon3", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffon3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500g", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.207"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "griffon-61"
+                    }, 
+                    {
+                        "uid": "griffon-62"
+                    }, 
+                    {
+                        "uid": "griffon-63"
+                    }, 
+                    {
+                        "uid": "griffon-64"
+                    }, 
+                    {
+                        "uid": "griffon-65"
+                    }, 
+                    {
+                        "uid": "griffon-66"
+                    }, 
+                    {
+                        "uid": "griffon-67"
+                    }, 
+                    {
+                        "uid": "griffon-68"
+                    }, 
+                    {
+                        "uid": "griffon-69"
+                    }, 
+                    {
+                        "uid": "griffon-70"
+                    }, 
+                    {
+                        "uid": "griffon-71"
+                    }, 
+                    {
+                        "uid": "griffon-72"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "griffon-73"
+                    }, 
+                    {
+                        "uid": "griffon-74"
+                    }, 
+                    {
+                        "uid": "griffon-75"
+                    }, 
+                    {
+                        "uid": "griffon-76"
+                    }, 
+                    {
+                        "uid": "griffon-77"
+                    }, 
+                    {
+                        "uid": "griffon-78"
+                    }, 
+                    {
+                        "uid": "griffon-79"
+                    }, 
+                    {
+                        "uid": "griffon-80"
+                    }, 
+                    {
+                        "uid": "griffon-81"
+                    }, 
+                    {
+                        "uid": "griffon-82"
+                    }, 
+                    {
+                        "uid": "griffon-83"
+                    }, 
+                    {
+                        "uid": "griffon-84"
+                    }, 
+                    {
+                        "uid": "griffon-85"
+                    }, 
+                    {
+                        "uid": "griffon-86"
+                    }, 
+                    {
+                        "uid": "griffon-87"
+                    }, 
+                    {
+                        "uid": "griffon-88"
+                    }, 
+                    {
+                        "uid": "griffon-89"
+                    }, 
+                    {
+                        "uid": "griffon-90"
+                    }, 
+                    {
+                        "uid": "griffon-91"
+                    }, 
+                    {
+                        "uid": "griffon-92"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "sgriffonib", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffonib", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffonib/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/sgriffonib/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {
+            "use_cacti": "no"
+        }, 
+        "site": "nancy", 
+        "mtu": null, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": null, 
+        "model": "Infiniband", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%"
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {}, 
+            {
+                "naming_pattern": "%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "sgrapheneib"
+                    }
+                ], 
+                "rate": 20000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "stalc1", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.224"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "talc-1"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "talc-2"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "talc-134"
+                    }, 
+                    {
+                        "uid": "talc-3"
+                    }, 
+                    {
+                        "uid": "talc-4"
+                    }, 
+                    {
+                        "uid": "talc-5"
+                    }, 
+                    {
+                        "uid": "talc-6"
+                    }, 
+                    {
+                        "uid": "talc-7"
+                    }, 
+                    {
+                        "uid": "talc-8"
+                    }, 
+                    {
+                        "uid": "talc-9"
+                    }, 
+                    {
+                        "uid": "talc-10"
+                    }, 
+                    {
+                        "uid": "talc-11"
+                    }, 
+                    {
+                        "uid": "talc-12"
+                    }, 
+                    {
+                        "uid": "talc-13"
+                    }, 
+                    {
+                        "uid": "talc-14"
+                    }, 
+                    {
+                        "uid": "talc-15"
+                    }, 
+                    {
+                        "uid": "talc-16"
+                    }, 
+                    {
+                        "uid": "talc-17"
+                    }, 
+                    {
+                        "uid": "talc-18"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "talc-19"
+                    }, 
+                    {
+                        "uid": "talc-20"
+                    }, 
+                    {
+                        "uid": "talc-21"
+                    }, 
+                    {
+                        "uid": "talc-22"
+                    }, 
+                    {
+                        "uid": "talc-23"
+                    }, 
+                    {
+                        "uid": "talc-24"
+                    }, 
+                    {
+                        "uid": "talc-25"
+                    }, 
+                    {
+                        "uid": "talc-26"
+                    }, 
+                    {
+                        "uid": "talc-27"
+                    }, 
+                    {
+                        "uid": "talc-28"
+                    }, 
+                    {
+                        "uid": "talc-29"
+                    }, 
+                    {
+                        "uid": "talc-30"
+                    }, 
+                    {
+                        "uid": "talc-31"
+                    }, 
+                    {
+                        "uid": "talc-32"
+                    }, 
+                    {
+                        "uid": "talc-33"
+                    }, 
+                    {
+                        "uid": "talc-34"
+                    }, 
+                    {
+                        "uid": "talc-35"
+                    }, 
+                    {
+                        "uid": "talc-36"
+                    }, 
+                    {
+                        "uid": "talc-37"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "stalc3"
+                    }
+                ], 
+                "rate": 10000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "router", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "gw-nancy"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "rate": 10000000000, 
+                        "uid": "talc-srv"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "stalc2", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.225"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "talc-38"
+                    }, 
+                    {
+                        "uid": "talc-39"
+                    }, 
+                    {
+                        "uid": "talc-40"
+                    }, 
+                    {
+                        "uid": "talc-41"
+                    }, 
+                    {
+                        "uid": "talc-42"
+                    }, 
+                    {
+                        "uid": "talc-43"
+                    }, 
+                    {
+                        "uid": "talc-44"
+                    }, 
+                    {
+                        "uid": "talc-45"
+                    }, 
+                    {
+                        "uid": "talc-46"
+                    }, 
+                    {
+                        "uid": "talc-47"
+                    }, 
+                    {
+                        "uid": "talc-48"
+                    }, 
+                    {
+                        "uid": "talc-49"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "talc-50"
+                    }, 
+                    {
+                        "uid": "talc-51"
+                    }, 
+                    {
+                        "uid": "talc-52"
+                    }, 
+                    {
+                        "uid": "talc-53"
+                    }, 
+                    {
+                        "uid": "talc-54"
+                    }, 
+                    {
+                        "uid": "talc-55"
+                    }, 
+                    {
+                        "uid": "talc-56"
+                    }, 
+                    {
+                        "uid": "talc-57"
+                    }, 
+                    {
+                        "uid": "talc-58"
+                    }, 
+                    {
+                        "uid": "talc-59"
+                    }, 
+                    {
+                        "uid": "talc-60"
+                    }, 
+                    {
+                        "uid": "talc-61"
+                    }, 
+                    {
+                        "uid": "talc-62"
+                    }, 
+                    {
+                        "uid": "talc-63"
+                    }, 
+                    {
+                        "uid": "talc-64"
+                    }, 
+                    {
+                        "uid": "talc-65"
+                    }, 
+                    {
+                        "uid": "talc-66"
+                    }, 
+                    {
+                        "uid": "talc-67"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "stalc4"
+                    }
+                ], 
+                "rate": 10000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "other", 
+                "ports": [
+                    {}, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "uid": "ftalc1"
+                    }, 
+                    {
+                        "kind": "other", 
+                        "port": "eth2", 
+                        "uid": "ftalc2"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "stalc3", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500G", 
+        "vlans": {
+            "naming_pattern": "Vlan-interface%VLANID%", 
+            "vlan1": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.226"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "talc-68"
+                    }, 
+                    {
+                        "uid": "talc-69"
+                    }, 
+                    {
+                        "uid": "talc-70"
+                    }, 
+                    {
+                        "uid": "talc-71"
+                    }, 
+                    {
+                        "uid": "talc-72"
+                    }, 
+                    {
+                        "uid": "talc-73"
+                    }, 
+                    {
+                        "uid": "talc-74"
+                    }, 
+                    {
+                        "uid": "talc-75"
+                    }, 
+                    {
+                        "uid": "talc-76"
+                    }, 
+                    {
+                        "uid": "talc-77"
+                    }, 
+                    {
+                        "uid": "talc-78"
+                    }, 
+                    {
+                        "uid": "talc-79"
+                    }, 
+                    {
+                        "uid": "talc-80"
+                    }, 
+                    {
+                        "uid": "talc-81"
+                    }, 
+                    {
+                        "uid": "talc-82"
+                    }, 
+                    {
+                        "uid": "talc-83"
+                    }, 
+                    {
+                        "uid": "talc-84"
+                    }, 
+                    {
+                        "uid": "talc-85"
+                    }, 
+                    {
+                        "uid": "talc-86"
+                    }, 
+                    {
+                        "uid": "talc-87"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "talc-88"
+                    }, 
+                    {
+                        "uid": "talc-89"
+                    }, 
+                    {
+                        "uid": "talc-90"
+                    }, 
+                    {
+                        "uid": "talc-91"
+                    }, 
+                    {
+                        "uid": "talc-92"
+                    }, 
+                    {
+                        "uid": "talc-93"
+                    }, 
+                    {
+                        "uid": "talc-94"
+                    }, 
+                    {
+                        "uid": "talc-95"
+                    }, 
+                    {
+                        "uid": "talc-96"
+                    }, 
+                    {
+                        "uid": "talc-97"
+                    }, 
+                    {
+                        "uid": "talc-98"
+                    }, 
+                    {
+                        "uid": "talc-99"
+                    }, 
+                    {
+                        "uid": "talc-100"
+                    }, 
+                    {
+                        "uid": "talc-101"
+                    }, 
+                    {
+                        "uid": "talc-102"
+                    }, 
+                    {
+                        "uid": "talc-103"
+                    }, 
+                    {
+                        "uid": "talc-104"
+                    }, 
+                    {
+                        "uid": "talc-133"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "stalc1"
+                    }, 
+                    {
+                        "uid": "stalc4"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }, 
+    {
+        "kind": "switch", 
+        "snmp_community": "public", 
+        "uid": "stalc4", 
+        "links": [
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc4", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/nancy", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc4/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/nancy/network_equipments/stalc4/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "nancy", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 176000000000, 
+        "model": "3com 4500G", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan100": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.79.227"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {
+                "naming_pattern": "GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "talc-105"
+                    }, 
+                    {
+                        "uid": "talc-106"
+                    }, 
+                    {
+                        "uid": "talc-107"
+                    }, 
+                    {
+                        "uid": "talc-108"
+                    }, 
+                    {
+                        "uid": "talc-109"
+                    }, 
+                    {
+                        "uid": "talc-110"
+                    }, 
+                    {
+                        "uid": "talc-111"
+                    }, 
+                    {
+                        "uid": "talc-112"
+                    }, 
+                    {
+                        "uid": "talc-113"
+                    }, 
+                    {
+                        "uid": "talc-114"
+                    }, 
+                    {
+                        "uid": "talc-115"
+                    }, 
+                    {
+                        "uid": "talc-116"
+                    }, 
+                    {
+                        "uid": "talc-117"
+                    }, 
+                    {
+                        "uid": "talc-118"
+                    }, 
+                    {
+                        "uid": "talc-119"
+                    }, 
+                    {
+                        "uid": "talc-120"
+                    }, 
+                    {
+                        "uid": "talc-121"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "talc-123"
+                    }, 
+                    {
+                        "uid": "talc-124"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "talc-125"
+                    }, 
+                    {
+                        "uid": "talc-126"
+                    }, 
+                    {
+                        "uid": "talc-127"
+                    }, 
+                    {
+                        "uid": "talc-128"
+                    }, 
+                    {
+                        "uid": "talc-129"
+                    }, 
+                    {
+                        "uid": "talc-130"
+                    }, 
+                    {
+                        "uid": "talc-131"
+                    }, 
+                    {
+                        "uid": "talc-132"
+                    }
+                ], 
+                "rate": 1000000000
+            }, 
+            {
+                "naming_pattern": "Ten-GigabitEthernet1/%LINECARD%/%PORT%", 
+                "kind": "switch", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "stalc3"
+                    }, 
+                    {
+                        "uid": "stalc2"
+                    }
+                ], 
+                "rate": 10000000000
+            }
+        ]
+    }
+]

@@ -1,0 +1,2274 @@
+[
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-1.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:c1", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.1", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/1"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:c4", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/1"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-1-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.1", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-1", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-1", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-1/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-1/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "1NVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-10.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:36", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.10", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/10"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:39", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/10"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-10-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.10", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-10", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-10", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-10/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-10/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "BMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-11.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:43", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.11", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/11"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:46", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/11"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-11-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.10", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-11", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-11", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-11/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-11/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "CMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-12.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:50", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.12", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/12"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:53", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/12"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-12-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.12", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-12", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-12", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-12/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-12/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "DMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-13.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:5d", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.13", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/13"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:60", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/13"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-13-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.13", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-13", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-13", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-13/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-13/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "FMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-14.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:6a", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.14", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/14"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:6d", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/14"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-14-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.14", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-14", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-14", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-14/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-14/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "GMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-15.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:77", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.15", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/15"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:7a", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/15"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-15-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.15", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-15", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-15", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-15/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-15/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "HMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-16.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:84", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.16", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/16"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:87", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/16"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-16-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.16", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-16", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-16", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-16/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-16/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "JMVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-2.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:ce", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.2", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/2"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:d1", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/2"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-2-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.2", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-2", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-2", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-2/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-2/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "2MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-3.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:db", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.3", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/3"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:de", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/3"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-3-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.3", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-3", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-3", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-3/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-3/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "3MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-4.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:e8", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.4", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/4"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:eb", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/4"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-4-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.3", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-4", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-4", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-4/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-4/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "4MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-5.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:f5", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.5", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/5"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d2:f8", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/5"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-5-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.5", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-5", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-5", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-5/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-5/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "5MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-6.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:02", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.6", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/6"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:05", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/6"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-6-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.6", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-6", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-6", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-6/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-6/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "6MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-7.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:0f", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.7", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/7"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:12", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/7"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-7-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.7", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-7", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-7", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-7/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-7/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "7MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-8.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:1c", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.8", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/8"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:1f", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/8"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-8-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.8", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-8", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-8", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-8/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-8/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "8MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }, 
+    {
+        "storage_devices": [
+            {
+                "vendor": "SEAGATE", 
+                "driver": "ahci", 
+                "rev": "n/a", 
+                "interface": "SATA", 
+                "device": "sda", 
+                "model": "ST9250610NS", 
+                "size": 250059350016
+            }
+        ], 
+        "network_adapters": [
+            {
+                "management": false, 
+                "mountable": true, 
+                "network_address": "petitprince-9.luxembourg.grid5000.fr", 
+                "switch": "mxl1", 
+                "driver": "bnx2x", 
+                "enabled": true, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:29", 
+                "ip6": null, 
+                "bridged": true, 
+                "ip": "172.16.177.9", 
+                "device": "eth0", 
+                "mounted": true, 
+                "switch_port": "Te0/9"
+            }, 
+            {
+                "management": false, 
+                "mountable": false, 
+                "switch": "mxl2", 
+                "driver": "bnx2x", 
+                "enabled": false, 
+                "rate": 10000000000, 
+                "interface": "Ethernet", 
+                "mac": "90:b1:1c:ac:d3:2c", 
+                "bridged": false, 
+                "device": "eth1", 
+                "mounted": false, 
+                "switch_port": "Te0/9"
+            }, 
+            {
+                "management": true, 
+                "switch_port": "Gi2/36", 
+                "network_address": "petitprince-9-bmc.luxembourg.grid5000.fr", 
+                "switch": "gw-luxembourg", 
+                "ip": "172.17.177.9", 
+                "enabled": true, 
+                "rate": 1000000000, 
+                "interface": "Ethernet", 
+                "mac": "00:25:84:e2:eb:c0", 
+                "mountable": false, 
+                "device": "bmc", 
+                "mounted": false
+            }
+        ], 
+        "operating_system": {
+            "release": "Wheezy", 
+            "kernel": "3.2.0-4-amd64", 
+            "version": 7.1, 
+            "name": "debian"
+        }, 
+        "monitoring": {
+            "wattmeter": false
+        }, 
+        "uid": "petitprince-9", 
+        "links": [
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-9", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-9/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/luxembourg/clusters/petitprince/nodes/petitprince-9/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "performance": {
+            "core_flops": 12140000000.0, 
+            "node_flops": 130600000000.0
+        }, 
+        "main_memory": {
+            "virtual_size": null, 
+            "ram_size": 33761955840
+        }, 
+        "bios": {
+            "release_date": "09/12/2012", 
+            "version": 1.3, 
+            "vendor": "Dell Inc."
+        }, 
+        "chassis": {
+            "serial": "9MVTG5J", 
+            "name": "PowerEdge M620", 
+            "manufacturer": "Dell Inc."
+        }, 
+        "architecture": {
+            "smp_size": 2, 
+            "platform_type": "x86_64", 
+            "smt_size": 12
+        }, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "gpu": {
+            "gpu": false
+        }, 
+        "addressing_plan": {
+            "kavlan": "10.40.0.0/14", 
+            "virt": "10.172.0.0/14"
+        }, 
+        "type": "node", 
+        "processor": {
+            "cache_l1": null, 
+            "cache_l3": 15728640, 
+            "cache_l2": 262144, 
+            "vendor": "Intel", 
+            "other_description": "Intel(R) Xeon(R) CPU E5-2630L 0 @ 2.00GHz", 
+            "clock_speed": 2000000000, 
+            "version": "E5-2630L", 
+            "cache_l1d": 32768, 
+            "instruction_set": "x86-64", 
+            "cache_l1i": 32768, 
+            "model": "Intel Xeon"
+        }, 
+        "supported_job_types": {
+            "virtual": "ivt", 
+            "besteffort": true, 
+            "deploy": true
+        }
+    }
+]

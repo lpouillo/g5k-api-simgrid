@@ -1,0 +1,709 @@
+[
+    {
+        "kind": "router", 
+        "snmp_community": "privkavlan", 
+        "uid": "gw-rennes", 
+        "links": [
+            {
+                "href": "/3.0/sites/rennes/network_equipments/gw-rennes", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "self"
+            }, 
+            {
+                "href": "/3.0/sites/rennes", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "parent"
+            }, 
+            {
+                "href": "/3.0/sites/rennes/network_equipments/gw-rennes/versions/fa4c1f02adefc6d92918d9c067fca952210bd119", 
+                "type": "application/vnd.grid5000.item+json", 
+                "rel": "version"
+            }, 
+            {
+                "href": "/3.0/sites/rennes/network_equipments/gw-rennes/versions", 
+                "type": "application/vnd.grid5000.collection+json", 
+                "rel": "versions"
+            }
+        ], 
+        "weathermap": {}, 
+        "site": "rennes", 
+        "mtu": 9216, 
+        "channels": {
+            "naming_pattern": "Po%CHANNELID%"
+        }, 
+        "routes": {}, 
+        "version": "fa4c1f02adefc6d92918d9c067fca952210bd119", 
+        "backplane_bps": 720000000000, 
+        "model": "Cisco WS-C6509-E", 
+        "vlans": {
+            "naming_pattern": "Vlan%VLANID%", 
+            "vlan709": {
+                "addresses": [
+                    "10.25.64.0/18"
+                ], 
+                "name": "kavlan-9"
+            }, 
+            "vlan708": {
+                "addresses": [
+                    "10.25.0.0/18"
+                ], 
+                "name": "kavlan-8"
+            }, 
+            "vlan716": {
+                "addresses": [
+                    "10.27.192.0/18"
+                ], 
+                "name": "kavlan-16"
+            }, 
+            "vlan705": {
+                "addresses": [
+                    "10.24.64.0/18"
+                ], 
+                "name": "kavlan-5"
+            }, 
+            "vlan704": {
+                "addresses": [
+                    "10.24.0.0/18"
+                ], 
+                "name": "kavlan-4"
+            }, 
+            "vlan707": {
+                "addresses": [
+                    "10.24.192.0/18"
+                ], 
+                "name": "kavlan-7"
+            }, 
+            "vlan706": {
+                "addresses": [
+                    "10.24.128.0/18"
+                ], 
+                "name": "kavlan-6"
+            }, 
+            "vlan701": {
+                "addresses": [
+                    "192.168.192.0/20"
+                ], 
+                "name": "kavlan-1"
+            }, 
+            "vlan703": {
+                "addresses": [
+                    "192.168.224.0/20"
+                ], 
+                "name": "kavlan-3"
+            }, 
+            "vlan702": {
+                "addresses": [
+                    "192.168.208.0/20"
+                ], 
+                "name": "kavlan-2"
+            }, 
+            "vlan101": {
+                "addresses": [
+                    "172.17.111.254"
+                ]
+            }, 
+            "vlan100": {
+                "administrative": true, 
+                "addresses": [
+                    "172.16.111.254"
+                ]
+            }, 
+            "vlan500": {
+                "addresses": [
+                    "192.168.4.19"
+                ]
+            }
+        }, 
+        "type": "network_equipment", 
+        "linecards": [
+            {}, 
+            {
+                "naming_pattern": "Te%LINECARD%/%PORT%", 
+                "kind": "virtual", 
+                "rate": 10000000000, 
+                "backplane_bps": 40000000000, 
+                "model": "WS-X6704-10GE", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "renater-rennes"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "model": "WS-X6748-GE-TX", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "paradent-46"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapluie-5"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "parapluie-10"
+                    }, 
+                    {
+                        "uid": "parapluie-2"
+                    }, 
+                    {
+                        "uid": "parapluie-8"
+                    }, 
+                    {
+                        "uid": "parapluie-3"
+                    }, 
+                    {
+                        "uid": "parapluie-9"
+                    }, 
+                    {
+                        "uid": "parapluie-6"
+                    }, 
+                    {
+                        "uid": "parapluie-13"
+                    }, 
+                    {
+                        "uid": "parapluie-14"
+                    }, 
+                    {
+                        "uid": "parapluie-15"
+                    }, 
+                    {
+                        "uid": "parapluie-11"
+                    }, 
+                    {
+                        "uid": "parapluie-12"
+                    }, 
+                    {
+                        "uid": "parapluie-19"
+                    }, 
+                    {
+                        "uid": "parapluie-20"
+                    }, 
+                    {
+                        "uid": "parapluie-16"
+                    }, 
+                    {
+                        "uid": "parapluie-18"
+                    }, 
+                    {
+                        "uid": "parapluie-17"
+                    }, 
+                    {
+                        "uid": "parapluie-25"
+                    }, 
+                    {
+                        "uid": "parapluie-24"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "model": "WS-X6748-GE-TX", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "paradent-42"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapluie-1"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "parapluie-7"
+                    }, 
+                    {
+                        "uid": "parapluie-4"
+                    }, 
+                    {
+                        "uid": "parapluie-23"
+                    }, 
+                    {
+                        "uid": "parapluie-21"
+                    }, 
+                    {
+                        "uid": "parapluie-22"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "model": "WS-X6748-GE-TX", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "paradent-6"
+                    }, 
+                    {
+                        "uid": "paradent-2"
+                    }, 
+                    {
+                        "uid": "paradent-1"
+                    }, 
+                    {
+                        "uid": "paradent-9"
+                    }, 
+                    {
+                        "uid": "paradent-4"
+                    }, 
+                    {
+                        "uid": "paradent-10"
+                    }, 
+                    {
+                        "uid": "paradent-3"
+                    }, 
+                    {
+                        "uid": "paradent-8"
+                    }, 
+                    {
+                        "uid": "paradent-5"
+                    }, 
+                    {
+                        "uid": "paradent-7"
+                    }, 
+                    {
+                        "uid": "paradent-61"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "paradent-59"
+                    }, 
+                    {
+                        "uid": "paradent-57"
+                    }, 
+                    {
+                        "uid": "paradent-58"
+                    }, 
+                    {
+                        "uid": "paradent-62"
+                    }, 
+                    {
+                        "uid": "paradent-56"
+                    }, 
+                    {
+                        "uid": "paradent-54"
+                    }, 
+                    {
+                        "uid": "paradent-55"
+                    }, 
+                    {
+                        "uid": "paradent-60"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "paradent-43"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapluie-28"
+                    }, 
+                    {
+                        "uid": "parapluie-27"
+                    }, 
+                    {
+                        "uid": "parapluie-35"
+                    }, 
+                    {
+                        "uid": "parapluie-38"
+                    }, 
+                    {
+                        "uid": "parapluie-36"
+                    }, 
+                    {
+                        "uid": "parapluie-39"
+                    }, 
+                    {
+                        "uid": "parapluie-40"
+                    }, 
+                    {
+                        "uid": "parapluie-37"
+                    }, 
+                    {
+                        "uid": "parapluie-34"
+                    }, 
+                    {
+                        "uid": "parapluie-32"
+                    }, 
+                    {
+                        "uid": "parapluie-31"
+                    }, 
+                    {
+                        "uid": "parapluie-30"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapluie-26"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "parapluie-29"
+                    }
+                ]
+            }, 
+            {}, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "model": "WS-X6748-GE-TX", 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "paradent-44"
+                    }, 
+                    {
+                        "uid": "paradent-50"
+                    }, 
+                    {
+                        "uid": "paradent-49"
+                    }, 
+                    {
+                        "uid": "paradent-48"
+                    }, 
+                    {
+                        "uid": "paradent-47"
+                    }, 
+                    {
+                        "uid": "paradent-45"
+                    }, 
+                    {
+                        "uid": "paradent-53"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "paradent-52"
+                    }, 
+                    {
+                        "uid": "paradent-51"
+                    }, 
+                    {
+                        "uid": "paradent-14"
+                    }, 
+                    {
+                        "uid": "paradent-18"
+                    }, 
+                    {
+                        "uid": "paradent-11"
+                    }, 
+                    {
+                        "uid": "paradent-12"
+                    }, 
+                    {
+                        "uid": "paradent-15"
+                    }, 
+                    {
+                        "uid": "paradent-16"
+                    }, 
+                    {
+                        "uid": "paradent-19"
+                    }, 
+                    {
+                        "uid": "paradent-20"
+                    }, 
+                    {
+                        "uid": "paradent-13"
+                    }, 
+                    {
+                        "uid": "paradent-17"
+                    }, 
+                    {
+                        "uid": "paradent-63"
+                    }, 
+                    {
+                        "uid": "paradent-64"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapluie-33"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapide-24"
+                    }, 
+                    {
+                        "uid": "parapide-22"
+                    }, 
+                    {
+                        "uid": "parapide-18"
+                    }, 
+                    {
+                        "uid": "parapide-19"
+                    }, 
+                    {
+                        "uid": "parapide-17"
+                    }, 
+                    {
+                        "uid": "parapide-16"
+                    }, 
+                    {
+                        "uid": "parapide-20"
+                    }, 
+                    {
+                        "uid": "parapide-14"
+                    }, 
+                    {
+                        "uid": "parapide-11"
+                    }, 
+                    {
+                        "uid": "parapide-15"
+                    }, 
+                    {
+                        "uid": "parapide-13"
+                    }, 
+                    {
+                        "uid": "parapide-12"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "model": "WS-X6748-GE-TX", 
+                "rate": 1000000000, 
+                "ports": [
+                    {}, 
+                    {
+                        "uid": "paradent-26"
+                    }, 
+                    {
+                        "uid": "paradent-29"
+                    }, 
+                    {
+                        "uid": "paradent-23"
+                    }, 
+                    {
+                        "uid": "paradent-25"
+                    }, 
+                    {
+                        "uid": "paradent-28"
+                    }, 
+                    {
+                        "uid": "paradent-24"
+                    }, 
+                    {
+                        "uid": "paradent-21"
+                    }, 
+                    {
+                        "uid": "paradent-30"
+                    }, 
+                    {
+                        "uid": "paradent-27"
+                    }, 
+                    {
+                        "uid": "paradent-22"
+                    }, 
+                    {
+                        "uid": "paradent-36"
+                    }, 
+                    {
+                        "uid": "paradent-39"
+                    }, 
+                    {
+                        "uid": "paradent-38"
+                    }, 
+                    {
+                        "uid": "paradent-40"
+                    }, 
+                    {
+                        "uid": "paradent-31"
+                    }, 
+                    {
+                        "uid": "paradent-32"
+                    }, 
+                    {
+                        "uid": "paradent-35"
+                    }, 
+                    {
+                        "uid": "paradent-37"
+                    }, 
+                    {
+                        "uid": "paradent-34"
+                    }, 
+                    {
+                        "uid": "paradent-33"
+                    }, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "parapide-3"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "parapide-21"
+                    }, 
+                    {
+                        "uid": "parapide-23"
+                    }, 
+                    {
+                        "uid": "parapide-25"
+                    }, 
+                    {
+                        "uid": "parapide-6"
+                    }, 
+                    {
+                        "uid": "parapide-7"
+                    }, 
+                    {
+                        "uid": "parapide-9"
+                    }, 
+                    {
+                        "uid": "parapide-8"
+                    }, 
+                    {
+                        "uid": "parapide-10"
+                    }, 
+                    {
+                        "uid": "parapide-5"
+                    }, 
+                    {}, 
+                    {
+                        "uid": "parapide-4"
+                    }, 
+                    {
+                        "uid": "parapide-1"
+                    }, 
+                    {
+                        "uid": "parapide-2"
+                    }
+                ]
+            }, 
+            {
+                "naming_pattern": "Gi%LINECARD%/%PORT%", 
+                "kind": "node", 
+                "rate": 1000000000, 
+                "backplane_bps": 40000000000, 
+                "model": "WS-X6748-GE-TX", 
+                "ports": [
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {}, 
+                    {
+                        "uid": "paradent-41"
+                    }
+                ]
+            }
+        ]
+    }
+]
