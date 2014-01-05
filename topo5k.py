@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from os import mkdir
 from json import load, dump
 from execo import logger
 from execo_g5k import get_resource_attributes, get_g5k_sites, get_site_clusters
@@ -7,8 +8,9 @@ from networkx import Graph, set_edge_attributes, get_edge_attributes
 cache_dir = 'cache/'
 _arbitrary_latency = 2.25E-3
 
-def get_topology_data(cache_dir = cache_dir):
+def get_topology(cache_dir = cache_dir, resources = ['grid5000']):
     """Create three dicts containing the data from backbone, equips and hosts """
+    logger.info('Retrieving topology data')
     if _check_topology_cache(cache_dir):
         backbone, equips, hosts = _get_topology_cache(cache_dir)
     else:
@@ -16,9 +18,9 @@ def get_topology_data(cache_dir = cache_dir):
 
     return backbone, equips, hosts
 
-def backbone_graph(backbone, latency = _arbitrary_latency):
+def get_backbone_graph(backbone, latency = _arbitrary_latency):
     if backbone is None:
-        backbone, _, _ = get_topology_data()
+        backbone, _, _ = get_topology()
     gr = Graph()
     # Adding backbone equipments and links
     for equip in backbone:
@@ -33,7 +35,7 @@ def backbone_graph(backbone, latency = _arbitrary_latency):
                 if not gr.has_edge(src, dst): gr.add_edge(src, dst, bandwidth = rate, latency = latency)
     return gr
 
-def site_graph(site, hosts, equips, latency = _arbitrary_latency):
+def get_site_graph(site, hosts, equips, latency = _arbitrary_latency):
     sgr = Graph()
     for equip in equips:
         src = equip['uid']+'.'+site
@@ -64,6 +66,8 @@ def site_graph(site, hosts, equips, latency = _arbitrary_latency):
                 if adapt['switch'] is None: 
                     print site, src, dst
                 else:
+                    # HACK FOR BUG IN GRAPHITE DESCRIPTION
+                    if adapt['switch'] == 'gw': adapt['switch'] = 'gw-'+site
                     dst = adapt['switch']+'.'+site
                 if not sgr.has_edge(src, dst): sgr.add_edge(src, dst, bandwidth = adapt['rate'], latency = latency)
     return sgr
@@ -74,15 +78,21 @@ def _get_api_commit():
 
 def _get_topology_cache(cache_dir = cache_dir):
     """Retrieve data from the API and write it into the cache directory"""
+    try: 
+        mkdir(cache_dir)
+        logger.debug('No cache found, directory created.')
+    except:
+        logger.debug('Cache directory is present')
+        pass
     equips, hosts = {}, {}
-    logger.info('Retrieving topology data ...')
+    logger.info('Retrieving topology data from API...')
     n_requests = 2    
     backbone = get_resource_attributes('/network_equipments')['items']
     f = open(cache_dir+'backbone', 'w') 
     dump(backbone, f, indent=4)
     f.close()
     
-    for site in get_g5k_sites():
+    for site in sorted(get_g5k_sites()):
         logger.info(site)
         n_requests += 1
         hosts[site] = {}

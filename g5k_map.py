@@ -28,7 +28,7 @@ links_10G = []
 links_1G = []
 sites_clusters = {}
 
-net_equip = get_resource_attributes('grid5000/network_equipments')
+net_equip = get_resource_attributes('/network_equipments')
 gn = geocoders.GeoNames()
 
 for equip in net_equip['items']:
@@ -40,7 +40,7 @@ for equip in net_equip['items']:
 #        sites_nodes = 0
         sites_clusters[site] = {}
         for cluster in get_site_clusters(site):
-            cluster_nodes = get_resource_attributes('grid5000/sites/'+site+'/clusters/'+cluster+'/nodes')['total']
+            cluster_nodes = get_resource_attributes('sites/'+site+'/clusters/'+cluster+'/nodes')['total']
             sites_clusters[site][cluster] = cluster_nodes 
 #            sites_nodes += cluster_nodes
             
