@@ -19,6 +19,7 @@ sites = get_g5k_sites()
 
 backbone, equips, hosts = get_topology()
 
+logger.info('Generating the graph')
 gr = get_backbone_graph(backbone)
 
 
@@ -26,8 +27,6 @@ for site in sites:
     sgr = get_site_graph(site, hosts[site], equips[site])
     gr.add_nodes_from(sgr.nodes_iter(data=True))
     gr.add_edges_from(sgr.edges_iter(data=True))
-logger.info('Generating the graph')
-plt.figure(figsize=(15, 15))
 
 logger.info('Defining nodes and edges types')
 ### HACK FOR NANCY AND IB
@@ -61,6 +60,8 @@ edges_other = [(edge[0], edge[1]) for edge in gr.edges_iter(data=True)
 logger.info('Defining positions')
 #pos = graphviz_layout(gr, prog='twopi')
 pos = graphviz_layout(gr, prog='neato')
+
+plt.figure(figsize=(15, 15))
 
 logger.info('Drawing nodes')
 draw_networkx_nodes(gr, pos, nodelist=backbone,
