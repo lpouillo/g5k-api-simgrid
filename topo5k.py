@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from os import mkdir
-from json import load, dump
+from pickle import load, dump
 from execo import logger
 from execo_g5k import get_resource_attributes, get_g5k_sites, get_site_clusters
 from networkx import Graph, set_edge_attributes, get_edge_attributes
@@ -105,7 +105,7 @@ def _get_topology_cache(cache_dir=_default_cache_dir, resources=['grid5000']):
     n_requests = 2
     backbone = get_resource_attributes('/network_equipments')['items']
     f = open(cache_dir + 'backbone', 'w')
-    dump(backbone, f, indent=4)
+    dump(backbone, f)
     f.close()
 
     for site in sorted(get_g5k_sites()):
@@ -118,14 +118,14 @@ def _get_topology_cache(cache_dir=_default_cache_dir, resources=['grid5000']):
             hosts[site][cluster] = get_resource_attributes(
                 'sites/' + site + '/clusters/' + cluster + '/nodes')['items']
             f = open(cache_dir + cluster + '_hosts', 'w')
-            dump(hosts[site][cluster], f, indent=4)
+            dump(hosts[site][cluster], f)
             f.close()
 
         n_requests += 1
         f = open(cache_dir + site + '_equips', 'w')
         equips[site] = get_resource_attributes(
                     'sites/' + site + '/network_equipments')['items']
-        dump(equips[site], f, indent=4)
+        dump(equips[site], f)
         f.close()
 
     f = open(cache_dir + 'api_commit', 'w')
