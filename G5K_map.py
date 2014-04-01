@@ -29,13 +29,12 @@ for site in sites:
 logger.info('Generating the graph')
 plt.figure(figsize=(15, 15))
 
-
 logger.info('Defining nodes and edges types')
 ### HACK FOR NANCY AND IB
 for node in gr.nodes():
     if 'ib.' in node or 'stalc' in node or 'voltaire' in node or 'ib-' in node\
         or 'summit' in node or 'ipmi' in node or 'CICT' in node or 'mxl2' in node\
-        or 'grelon' in node or 'myrinet' in node or 'salome' in node:
+        or 'grelon' in node or 'myrinet' in node or 'salome' in node or 'interco' in node:
         gr.remove_node(node)
 
 backbone = [node[0] for node in gr.nodes_iter(data=True)
@@ -65,22 +64,26 @@ pos = graphviz_layout(gr, prog='neato')
 
 logger.info('Drawing nodes')
 draw_networkx_nodes(gr, pos, nodelist=backbone,
-        node_shape='v', node_size=50)
+        node_shape='p', node_color='#9CF7BC', node_size=200)
 draw_networkx_nodes(gr, pos, nodelist=gw_nodes,
-        node_shape='8', node_color='g', node_size=150,
+        node_shape='8', node_color='#BFDFF2', node_size=300,
         labels=gw_nodes)
 draw_networkx_nodes(gr, pos, nodelist=sw_nodes,
-        node_color='b', node_size=75)
+        node_shape='s', node_color='#F5C9CD', node_size=100)
 draw_networkx_nodes(gr, pos, nodelist=nodes_nodes,
-        node_color='y', node_size=5)
+        node_shape='o', node_color='#F0F7BE', node_size=10)
 
 logger.info('Drawing labels')
 draw_networkx_labels(gr, pos,
-    labels={node: node.split('-')[1].title() for node in backbone})
-draw_networkx_labels(gr, pos,
-    labels={node: node.split('-')[0] for node in nodes_nodes if '-1.' in node})
+    labels={node: node.split('-')[1].title() for node in backbone},
+    font_size=16, font_weight='normal')
 #draw_networkx_labels(gr, pos,
-#    labels={node: node.split('.')[0] for node in sw_nodes})
+#    labels={node: node.split('.')[0].split('-')[0] for node in gw_nodes},
+#    font_size=14, font_weight='normal')
+draw_networkx_labels(gr, pos,
+    labels={node: node.split('-')[0] for node in nodes_nodes if '-1.' in node},
+    font_size=14, font_weight='normal')
+
 
 logger.info('Drawing edges')
 draw_networkx_edges(gr, pos, edgelist=edges_1G,
@@ -98,4 +101,4 @@ draw_networkx_edges(gr, pos, edgelist=edges_other,
 logger.info('Saving figure')
 plt.axis('off')
 plt.tight_layout()
-plt.savefig('test.png', bbox_inches='tight')
+plt.savefig('test.png', bbox_inches='tight', dpi=300)
