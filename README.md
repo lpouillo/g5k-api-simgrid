@@ -18,7 +18,7 @@ will generate a map.
  
   topo5k -m simgrid -r nancy
   
-will produce the SimGrid platform file for Nancy.
+will produce the SimGrid platform file for Nancy.map
 
 
 
@@ -31,8 +31,9 @@ A Python script that generate a platform file for the SimGrid software.
 http://simgrid.gforge.inria.fr/
 
 Requirements : 
-- execo
 - networkx
+- execo
+
 
 To generate the platform file, run
 
