@@ -1,9 +1,28 @@
-G5k topology tools
-==================
+topo5k
+======
 
-Ruby and Python scripts to retrieve informations about the Grid'5000 topology from the API.
+A command line tool to retrieve Grid'5000 topology under several formats.
+Current version includes, for Grid'5000, a site or a cluster:
+- a map
+- a SimGrid platform file
 
-Require an account on the platform grid5000 from INRIA.
+Based on execo 2.3 and Grid'5000 API. 
+
+
+Usage
+-----
+
+  topo5k -m map
+  
+will generate a map.
+ 
+  topo5k -m simgrid -r nancy
+  
+will produce the SimGrid platform file for Nancy.
+
+
+
+
 
 
 G5K_simgrid.py
