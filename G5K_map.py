@@ -1,13 +1,11 @@
 #!/usr/bin/env python
-from pprint import pprint
+
 from execo import logger
-from execo_g5k import api_utils as API
 from execo_g5k import get_g5k_sites
 from topo5k import get_topology, get_backbone_graph, get_site_graph
 import matplotlib.pyplot as plt
-from geopy import geocoders
-from networkx import Graph, graphviz_layout, draw_networkx, draw_networkx_nodes, draw_networkx_edges, \
-draw_networkx_labels, spring_layout, draw_shell
+from networkx import graphviz_layout, draw_networkx_nodes, draw_networkx_edges,\
+    draw_networkx_labels
 #import matplotlib.patches as patches
 #from copy import copy
 #from math import sqrt

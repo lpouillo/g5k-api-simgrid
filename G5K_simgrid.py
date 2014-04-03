@@ -10,11 +10,13 @@ from networkx import shortest_path
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring, parse
 
+
 def prettify(elem):
     """Return a pretty-printed XML string for the Element.  """
     rough_string = tostring(elem, 'utf-8')
     reparsed = minidom.parseString(rough_string)
-    return reparsed.toprettyxml(indent="  ").replace('<?xml version="1.0" ?>\n', '')
+    return reparsed.toprettyxml(indent="  ").replace('<?xml version="1.0" ?>\n',
+                                                      '')
 
 logger.setLevel('INFO')
 
@@ -32,18 +34,19 @@ for site in sites:
     site_gr[site] = get_site_graph(site, hosts[site], equips[site])
 
 # Creating the AS
-platform = Element('platform', attrib = {'version': '3'})
-main_as = SubElement(platform, 'AS', attrib = {'id': 'grid5000.fr', 'routing': default_routing})    
+platform = Element('platform', attrib={'version': '3'})
+main_as = SubElement(platform, 'AS', attrib={'id': 'grid5000.fr',
+                                             'routing': default_routing})
 for site in sites:
-    SubElement(main_as, 'AS', attrib = {'id': site+suffix, 'routing': default_routing})
+    SubElement(main_as, 'AS', attrib={'id': site + suffix, 'routing': default_routing})
 # Creating the backbone links
 for element1, element2, attrib in sorted(gr.edges_iter(data=True)):
-    element1, element2 = sorted( [element1, element2 ] )   
-    SubElement(main_as, 'link', attrib = {'id': element1+'_'+element2, 
-                                              'latency': str(attrib['latency']), 
+    element1, element2 = sorted([element1, element2])
+    SubElement(main_as, 'link', attrib={'id': element1 + '_' + element2,
+                            'latency': str(attrib['latency']),
                                               'bandwidth': str(attrib['bandwidth'])})
 # Creating the backbone routes between gateways
-gws = [ n for n,d in gr.nodes_iter(data=True) if 'gw' in n ]
+gws = [n for n,d in gr.nodes_iter(data=True) if 'gw' in n]
 for el in product(gws, gws):
     if el[0] != el[1]:
         p = main_as.find("./ASroute/[@gw_src='"+el[1]+"'][@gw_dst='"+el[0]+"']")
