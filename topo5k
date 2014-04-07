@@ -63,6 +63,7 @@ optmap.add_argument('-f', '--outfmt',
                     help='Image output format (jpg, png, svg)')
 optmap.add_argument('--graphviz_program',
                 help='Graphviz program used for positions computations ')
+optmap.add_argument('--dpi')
 
 optsimgrid = parser.add_argument_group(style.host("SIMGRID options"))
 
@@ -84,7 +85,7 @@ clusters = []
 for element in args.resources.split(','):
     if element == 'grid5000':
         sites = get_g5k_sites()
-        args.outfile = 'grid5000'
+        args.outfile = 'grid5000.png'
         break
     elif element in get_g5k_sites():
         sites.append(element)
@@ -111,9 +112,9 @@ else:
 
 remove_non_g5k(gr)
 
-
 if args.mode == 'treemap':
-    gr_to_image(gr)
+    logger.info('Generating image')
+    gr_to_image(gr, outfile=args.outfile)
 elif args.mode == 'simgrid':
     gr_to_simgrid(gr)
 

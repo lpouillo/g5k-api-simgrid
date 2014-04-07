@@ -22,9 +22,6 @@ will produce the SimGrid platform file for Nancy.map
 
 
 
-
-
-
 G5K_simgrid.py
 --------------
 A Python script that generate a platform file for the SimGrid software.
