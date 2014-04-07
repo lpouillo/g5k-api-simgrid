@@ -4,7 +4,7 @@ from execo import logger
 from execo_g5k import get_g5k_sites
 from topo5k import get_topology, get_backbone_graph, get_site_graph
 import matplotlib.pyplot as plt
-from networkx import graphviz_layout, draw_networkx_nodes, draw_networkx_edges,\
+from networkx import graphviz_layout, draw_networkx_nodes, draw_networkx_edges, \
     draw_networkx_labels
 #import matplotlib.patches as patches
 #from copy import copy

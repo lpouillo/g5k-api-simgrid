@@ -12,7 +12,7 @@ Based on execo 2.3 and Grid'5000 API.
 Usage
 -----
 
-  topo5k -m map
+  topo5k -m treemap
   
 will generate a map.
  

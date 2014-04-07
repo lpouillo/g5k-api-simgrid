@@ -5,7 +5,7 @@ from execo import logger
 from execo.log import style
 from execo_g5k import get_g5k_sites
 from execo.time_utils import  format_date
-from execo_g5k.topology import backbone_graph, site_graph, gr_to_map, \
+from execo_g5k.topology import backbone_graph, site_graph, gr_to_image, \
     remove_non_g5k, gr_to_simgrid
 import matplotlib.pyplot as plt
 from networkx import shortest_path, compose
@@ -13,7 +13,7 @@ from networkx import shortest_path, compose
 prog = 'topo5k'
 description = 'This tool provides an access to the network topology of ' + \
     'the Grid\'5000 platform. It has two output format: \n' + \
-    style.host('map') + ' = generate a map with networkx\n' + \
+    style.host('treemap') + ' = generate a map with networkx\n' + \
     style.host('simgrid') + ' = produce a SimGrid platform file'
 
 epilog = ''
@@ -30,10 +30,10 @@ optinout.add_argument("-h", "--help",
                 help="show this help message and exit")
 optinout.add_argument('--version',
                 action='version',
-                version='%(prog)s 1.0.1')
+                version='%(prog)s 0.1')
 optinout.add_argument("-m", "--mode",
                 dest="mode",
-                default='map',
+                default='treemap',
                 help="Setup the mode: map or simgrid " + \
                     "\ndefault = %(default)s")
 optinout.add_argument("-o", "--outfile",
@@ -58,6 +58,15 @@ parser.add_argument("-r", "--resources",
                 help="Comma separated list of Grid'5000 elements " + \
                         "(grid5000 or sites )")
 
+optmap = parser.add_argument_group(style.host("TREEMAP options"))
+optmap.add_argument('-f', '--outfmt',
+                    help='Image output format (jpg, png, svg)')
+optmap.add_argument('--graphviz_program',
+                help='Graphviz program used for positions computations ')
+
+optsimgrid = parser.add_argument_group(style.host("SIMGRID options"))
+
+
 args = parser.parse_args()
 
 if args.verbose:
@@ -66,8 +75,6 @@ elif args.quiet:
     logger.setLevel('WARN')
 else:
     logger.setLevel('INFO')
-
-logger.setLevel('DEBUG')
 
 logger.info('%s', style.log_header('-- Grid\'5000 network topology --'))
 
@@ -81,7 +88,9 @@ for element in args.resources.split(','):
         break
     elif element in get_g5k_sites():
         sites.append(element)
+logger.info('topology of %s', ', '.join(map(lambda x: style.emph(x), sites)))
 
+logger.info('retrieving data from %s', style.log_header('Grid\'5000 API'))
 if len(sites) == 1:
     gr = site_graph(sites[0])
 else:
@@ -102,11 +111,9 @@ else:
 
 remove_non_g5k(gr)
 
-if args.mode == 'map':
-    gr_to_map(gr)
+
+if args.mode == 'treemap':
+    gr_to_image(gr)
 elif args.mode == 'simgrid':
     gr_to_simgrid(gr)
-
-
-
 
