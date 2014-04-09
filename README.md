@@ -6,7 +6,7 @@ Current version includes, for Grid'5000, a site or a cluster:
 - a map
 - a SimGrid platform file
 
-Based on execo 2.3 and Grid'5000 API. 
+Based on execo 2.3-dev and Grid'5000 API. 
 
 
 Usage
@@ -14,43 +14,20 @@ Usage
 
   topo5k -m treemap
   
-will generate a map.
+will generate a tree map of Grid'5000 (default mode).
  
-  topo5k -m simgrid -r nancy
+  topo5k -m simgrid
   
-will produce the SimGrid platform file for Nancy.map
+will produce the SimGrid platform file for the whole platform.
 
+You can specify one or several sites,
 
+  topo5k -m treemap -r nancy 
+  topo5k -m simgrid -r lyon,luxembourg   
 
-G5K_simgrid.py
---------------
-A Python script that generate a platform file for the SimGrid software.
-http://simgrid.gforge.inria.fr/
+ or directly used an oar/oargrid job id.
 
-Requirements : 
-- networkx
-- execo
-
-
-To generate the platform file, run
-
-    ./G5K_simgrid.py
-    
-    
-
-draw_g5k_topology.rb
---------------------
-
-Gem dependencies :
-- rubygems
-- net-ssh-gateway
-- rest-client
-- json
-- socket
-- optparse
-- graphviz
-- media_wiki
-
-
+  topo5k -m treemap -j 49177
+  topo5k -m simgrid -j grenoble:1659169 
 
 
