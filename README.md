@@ -8,26 +8,7 @@ Current version includes, for Grid'5000, a site or a cluster:
 
 Based on execo 2.3-dev and Grid'5000 API. 
 
+See https://www.grid5000.fr/mediawiki/index.php/Topo5k for more information.
 
-Usage
------
-
-    topo5k -m treemap
-  
-will generate a tree map of Grid'5000 (default mode).
- 
-    topo5k -m simgrid
-  
-will produce the SimGrid platform file for the whole platform.
-
-You can specify one or several sites,
-
-    topo5k -m treemap -r nancy 
-    topo5k -m simgrid -r lyon,luxembourg   
-
- or directly used an oar/oargrid job id.
-
-    topo5k -m treemap -j 49177
-    topo5k -m simgrid -j grenoble:1659169 
 
 
