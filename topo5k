@@ -111,7 +111,7 @@ else:
         if element == 'grid5000':
             sites = get_g5k_sites()
             if args.outfile is None:
-                args.outfile = 'grid5000.png'
+                args.outfile = 'grid5000'
             break
         elif element in get_g5k_sites():
             sites.append(element)
