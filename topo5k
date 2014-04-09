@@ -3,10 +3,11 @@ from argparse import ArgumentParser, RawTextHelpFormatter
 from time import time
 from execo import logger
 from execo.log import style
-from execo_g5k import get_g5k_sites
+from execo_g5k import get_g5k_sites, get_oar_job_nodes, get_oargrid_job_nodes, \
+get_host_site
 from execo.time_utils import  format_date
 from execo_g5k.topology import backbone_graph, site_graph, gr_to_image, \
-    remove_non_g5k, gr_to_simgrid
+    remove_non_g5k, gr_to_simgrid, filter_compute_nodes
 import matplotlib.pyplot as plt
 from networkx import shortest_path, compose
 
@@ -52,11 +53,16 @@ optio.add_argument("-v", "--verbose",
                 default=False,
                 help="Run in verbose mode")
 
-parser.add_argument("-r", "--resources",
+resources = parser.add_mutually_exclusive_group()
+resources.add_argument("-r", "--resources",
                 dest="resources",
-                default="grid5000",
+                default=None,
                 help="Comma separated list of Grid'5000 elements " + \
                         "(grid5000 or sites )")
+resources.add_argument("-j", "--job-id",
+                dest="job_id",
+                default=None,
+                help="oar_job_id  (site:XXXXX) or oargrid_job_id ")
 
 optmap = parser.add_argument_group(style.host("TREEMAP options"))
 optmap.add_argument('-f', '--outfmt',
@@ -81,14 +87,35 @@ logger.info('%s', style.log_header('-- Grid\'5000 network topology --'))
 
 sites = []
 clusters = []
+nodes = []
 
-for element in args.resources.split(','):
-    if element == 'grid5000':
-        sites = get_g5k_sites()
-        args.outfile = 'grid5000.png'
-        break
-    elif element in get_g5k_sites():
-        sites.append(element)
+if args.job_id:
+    if ':' in args.job_id:
+        site, job_id = args.job_id.split(':')
+        nodes = get_oar_job_nodes(int(job_id), site)
+        sites = [site]
+        if args.outfile is None:
+            args.outfile = site + '_' + job_id
+    else:
+        nodes = get_oargrid_job_nodes(int(args.job_id))
+        for node in nodes:
+            site = get_host_site(node)
+            if site not in sites:
+                sites.append(site)
+        if args.outfile is None:
+            args.outfile = args.job_id
+else:
+    if not args.resources:
+        args.resources = 'grid5000'
+    for element in args.resources.split(','):
+        if element == 'grid5000':
+            sites = get_g5k_sites()
+            if args.outfile is None:
+                args.outfile = 'grid5000.png'
+            break
+        elif element in get_g5k_sites():
+            sites.append(element)
+
 logger.info('topology of %s', ', '.join(map(lambda x: style.emph(x), sites)))
 
 logger.info('retrieving data from %s', style.log_header('Grid\'5000 API'))
@@ -112,9 +139,11 @@ else:
 
 remove_non_g5k(gr)
 
+if len(nodes) > 0:
+    filter_compute_nodes(gr, nodes)
+
 if args.mode == 'treemap':
     logger.info('Generating image')
     gr_to_image(gr, outfile=args.outfile)
 elif args.mode == 'simgrid':
-    gr_to_simgrid(gr)
-
+    gr_to_simgrid(gr, outfile=args.outfile)
