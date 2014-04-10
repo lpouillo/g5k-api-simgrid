@@ -1,6 +1,6 @@
 #!/usr/bin/env python
+import datetime
 from argparse import ArgumentParser, RawTextHelpFormatter
-from time import time
 from execo import logger
 from execo.log import style
 from execo_g5k import get_g5k_sites, get_oar_job_nodes, get_oargrid_job_nodes, \
@@ -11,12 +11,13 @@ from execo_g5k.topology import backbone_graph, site_graph, gr_to_image, \
 import matplotlib.pyplot as plt
 from networkx import shortest_path, compose
 
+
 prog = 'topo5k'
+version = '0.1'
 description = 'This tool provides an access to the network topology of ' + \
     'the Grid\'5000 platform. It has two output format: \n' + \
     style.host('treemap') + ' = generate a map with networkx\n' + \
     style.host('simgrid') + ' = produce a SimGrid platform file'
-
 epilog = ''
 
 parser = ArgumentParser(prog=prog,
@@ -31,7 +32,7 @@ optinout.add_argument("-h", "--help",
                 help="show this help message and exit")
 optinout.add_argument('--version',
                 action='version',
-                version='%(prog)s 0.1')
+                version='%(prog)s ' + version)
 optinout.add_argument("-m", "--mode",
                 dest="mode",
                 default='treemap',
@@ -111,7 +112,7 @@ else:
         if element == 'grid5000':
             sites = get_g5k_sites()
             if args.outfile is None:
-                args.outfile = 'grid5000'
+                args.outfile = 'grid5000-' + str(datetime.date.today())
             break
         elif element in get_g5k_sites():
             sites.append(element)
@@ -146,4 +147,6 @@ if args.mode == 'treemap':
     logger.info('Generating image')
     gr_to_image(gr, outfile=args.outfile)
 elif args.mode == 'simgrid':
-    gr_to_simgrid(gr, outfile=args.outfile)
+    tool = 'Generated using ' + prog + ' ' + version + ' \n     ' + \
+        'https://www.grid5000.fr/mediawiki/index.php/Topo5k'
+    gr_to_simgrid(gr, outfile=args.outfile, tool=tool)
