@@ -162,6 +162,8 @@ elif args.mode == 'simgrid':
         extract = Process('cd examples && tar -xzf masterslave.tgz')
         extract.shell = True
         extract.run()
+        if not '.xml' in args.outfile:
+            args.outfile += '.xml'
         test = Process('./examples/masterslave/masterslave_arg ' + \
                        args.outfile + ' 10 5').run()
         print test.stdout
