@@ -73,6 +73,12 @@ optmap.add_argument('--graphviz_program',
 optmap.add_argument('--dpi')
 
 optsimgrid = parser.add_argument_group(style.host("SIMGRID options"))
+optsimgrid.add_argument('--check-simgrid',
+                dest='check_simgrid',
+                action="store_true",
+                help="Execute a masterslave example on the generated" + \
+                 " platform file (requires SimGrid)"
+                        )
 
 
 args = parser.parse_args()
@@ -151,6 +157,13 @@ elif args.mode == 'simgrid':
         'https://www.grid5000.fr/mediawiki/index.php/Topo5k'
     gr_to_simgrid(gr, outfile=args.outfile, tool_signature=tool)
 
-    test = Process('./examples/masterslave/masterslave_arg examples/grid5000.xml 10 5').run()
-    print test.stdout
-    print test.stderr
+    if args.check_simgrid:
+        logger.info('Checking generated platform file')
+        extract = Process('cd examples && tar -xzf masterslave.tgz')
+        extract.shell = True
+        extract.run()
+        test = Process('./examples/masterslave/masterslave_arg ' + \
+                       args.outfile + ' 10 5').run()
+        print test.stdout
+        print test.stderr
+        remove = Process('rm -rf examples/masterslave').run()
