@@ -1,23 +1,27 @@
 #!/usr/bin/env python
 import datetime
+from pprint import pprint
 from argparse import ArgumentParser, RawTextHelpFormatter
 from execo import logger, Process
 from execo.log import style
 from execo_g5k import get_g5k_sites, get_oar_job_nodes, get_oargrid_job_nodes, \
-get_host_site
-from execo.time_utils import  format_date
-from execo_g5k.topology import backbone_graph, site_graph, gr_to_image, \
-    remove_non_g5k, gr_to_simgrid, filter_compute_nodes
-import matplotlib.pyplot as plt
-from networkx import shortest_path, compose
+    get_host_site
+from execo_g5k.topology import g5k_graph, treemap, hadoop, simgrid
 
+# Initializing topo5k 
+suffix = '.grid5000.fr'
+sites = []
+clusters = []
+nodes = []
 
+# Options definition
 prog = 'topo5k'
 version = '0.1'
 description = 'This tool provides an access to the network topology of ' + \
     'the Grid\'5000 platform. It has two output format: \n' + \
     style.host('treemap') + ' = generate a map with networkx\n' + \
-    style.host('simgrid') + ' = produce a SimGrid platform file'
+    style.host('simgrid') + ' = produce a SimGrid platform file' + \
+    style.host('hadoop') + ' = return the list hosts grouped by switch '
 epilog = ''
 
 parser = ArgumentParser(prog=prog,
@@ -26,61 +30,73 @@ parser = ArgumentParser(prog=prog,
                         formatter_class=RawTextHelpFormatter,
                         add_help=False)
 optinout = parser.add_argument_group(style.host("General options"),
-                "Define mode and controls I/O.")
+                                     "Define mode and controls I/O.")
 optinout.add_argument("-h", "--help",
-                action="help",
-                help="show this help message and exit")
+                      action="help",
+                      help="show this help message and exit")
 optinout.add_argument('--version',
-                action='version',
-                version='%(prog)s ' + version)
+                      action='version',
+                      version='%(prog)s ' + version)
 optinout.add_argument("-m", "--mode",
-                dest="mode",
-                default='treemap',
-                help="Setup the mode: map or simgrid " + \
-                    "\ndefault = %(default)s")
+                      dest="mode",
+                      default='treemap',
+                      help="Setup the mode: treemap or simgrid " +
+                      "\ndefault = %(default)s")
 optinout.add_argument("-o", "--outfile",
-                dest="outfile",
-                help="Define the outfile name")
+                      dest="outfile",
+                      help="Define the outfile name")
+optinout.add_argument('--compact',
+                      dest='compact',
+                      action="store_true",
+                      help="Use cluster description instead of hosts")
 
 optio = optinout.add_mutually_exclusive_group()
 optio.add_argument("-q", "--quiet",
-                dest="quiet",
-                action="store_true",
-                default=False,
-                help="Run without printing anything")
+                   dest="quiet",
+                   action="store_true",
+                   default=False,
+                   help="Run without printing anything")
 optio.add_argument("-v", "--verbose",
-                dest="verbose",
-                action="store_true",
-                default=False,
-                help="Run in verbose mode")
+                   dest="verbose",
+                   action="store_true",
+                   default=False,
+                   help="Run in verbose mode")
 
 resources = parser.add_mutually_exclusive_group()
 resources.add_argument("-r", "--resources",
-                dest="resources",
-                default=None,
-                help="Comma separated list of Grid'5000 elements " + \
-                        "(grid5000 or sites )")
+                       dest="resources",
+                       default="grid5000",
+                       help="Comma separated list of Grid'5000 elements " +
+                       "(grid5000 or sites )")
 resources.add_argument("-j", "--job-id",
-                dest="job_id",
-                default=None,
-                help="oar_job_id  (site:XXXXX) or oargrid_job_id ")
+                       dest="job_id",
+                       default=None,
+                       help="oar_job_id  (site:XXXXX) or oargrid_job_id ")
+
 
 optmap = parser.add_argument_group(style.host("TREEMAP options"))
-optmap.add_argument('-f', '--outfmt',
-                    help='Image output format (jpg, png, svg)')
-optmap.add_argument('--graphviz_program',
-                help='Graphviz program used for positions computations ')
-optmap.add_argument('--dpi')
+optmap.add_argument('--graphviz-program',
+                    dest='graphviz',
+                    default='neato',
+                    help='Graphviz program used for positions computations ')
+optmap.add_argument('--dpi',
+                    type=int,
+                    dest="dpi",
+                    default=300,
+                    help="DPI of the image")
+optmap.add_argument('--all-nodes',
+                    action="store_true",
+                    dest="all_nodes",
+                    help="Show all nodes labels")
 
 optsimgrid = parser.add_argument_group(style.host("SIMGRID options"))
 optsimgrid.add_argument('--check-simgrid',
-                dest='check_simgrid',
-                action="store_true",
-                help="Execute a masterslave example on the generated" + \
-                 " platform file (requires SimGrid)"
-                        )
+                        dest='check_simgrid',
+                        action="store_true",
+                        help="Execute a masterslave example on the generated" +
+                        " platform file (requires SimGrid)")
 
-
+# Parsing options
 args = parser.parse_args()
 
 if args.verbose:
@@ -89,83 +105,92 @@ elif args.quiet:
     logger.setLevel('WARN')
 else:
     logger.setLevel('INFO')
-
 logger.info('%s', style.log_header('-- Grid\'5000 network topology --'))
 
-sites = []
-clusters = []
-nodes = []
+# Checking that mode given is valid
+if args.mode not in ['treemap', 'simgrid', 'hadoop']:
+    logger.error('Invalid mode selected: %s, \ntype %s for help',
+                 style.emph(args.mode), style.emph(prog + ' -h'))
+    exit()
 
+# Defining sites and hosts
+sites = []
+hosts = []
 if args.job_id:
     if ':' in args.job_id:
-        site, job_id = args.job_id.split(':')
-        nodes = get_oar_job_nodes(int(job_id), site)
-        sites = [site]
+        tmp_outfile = ''
+        for job in args.job_id.split(','):
+            site, job_id = job.split(':')
+            sites.append(site)
+            hosts += get_oar_job_nodes(int(job_id), site)
+            tmp_outfile += site + '_' + job_id + '_'
         if args.outfile is None:
-            args.outfile = site + '_' + job_id
+            args.outfile = tmp_outfile[:-1] + '.png'
     else:
-        nodes = get_oargrid_job_nodes(int(args.job_id))
+        hosts = get_oargrid_job_nodes(int(args.job_id))
         for node in nodes:
             site = get_host_site(node)
             if site not in sites:
                 sites.append(site)
         if args.outfile is None:
-            args.outfile = args.job_id
+            args.outfile = args.job_id + '.png'
 else:
-    if not args.resources:
-        args.resources = 'grid5000'
-    for element in args.resources.split(','):
-        if element == 'grid5000':
-            sites = get_g5k_sites()
-            if args.outfile is None:
-                args.outfile = 'grid5000-' + str(datetime.date.today())
-            break
-        elif element in get_g5k_sites():
-            sites.append(element)
+    if 'grid5000' in args.resources.split(','):
+        sites = get_g5k_sites()
+    else:
+        for element in args.resources.split(','):
+            if element in get_g5k_sites():
+                sites.append(element)
+            else:
+                logger.warning('%S is not a valid site', element)
+    if not args.outfile:
+        if 'grid5000' in args.resources.split(','):
+            args.outfile = 'grid5000-' + str(datetime.date.today())
+        else:
+            args.outfile = '_'.join(sites) + '-' + str(datetime.date.today())
+        if args.mode == 'treemap':
+            args.outfile += '.png'
+        elif args.mode == 'simgrid':
+            args.outfile += '.xml'
 
-logger.info('topology of %s', ', '.join(map(lambda x: style.emph(x), sites)))
 
-logger.info('retrieving data from %s', style.log_header('Grid\'5000 API'))
-if len(sites) == 1:
-    gr = site_graph(sites[0])
+# Create the networkx graph object
+if len(sites) == 0:
+    logger.error('Wrong resources option given %s', args.resources)
+    exit()
 else:
-    gr = backbone_graph()
-    for site in sites:
-        sgr = site_graph(site)
-        gr = compose(gr, sgr)
-    renater_used = []
-    for site in sites:
-        for dest in sites:
-            if dest != site:
-                renater_used += shortest_path(gr, 'renater.' + site,
-                                              'renater.' + dest)
-    renater_used = list(set(renater_used))
-    for node in gr.nodes():
-        if node.split('.')[1] not in sites and node not in renater_used:
-            gr.remove_node(node)
+    logger.info('topology of %s',
+                ' '.join(map(lambda x: style.emph(x), sites)))
+    if len(hosts) == 0:
+        gr = g5k_graph(sites)
+    else:
+        gr = g5k_graph()
+        for host in hosts:
+            gr.add_host(host)
 
-remove_non_g5k(gr)
 
-if len(nodes) > 0:
-    filter_compute_nodes(gr, nodes)
-
+# Saving the graph object to image or XML
 if args.mode == 'treemap':
-    logger.info('Generating image')
-    gr_to_image(gr, outfile=args.outfile)
-elif args.mode == 'simgrid':
-    tool = 'Generated using ' + prog + ' ' + version + ' \n     ' + \
-        'https://www.grid5000.fr/mediawiki/index.php/Topo5k'
-    gr_to_simgrid(gr, outfile=args.outfile, tool_signature=tool)
+    logger.info('Saving image file to %s', style.emph(args.outfile))
+    plot = treemap(gr, compact=args.compact)
+    plot.savefig(args.outfile, dpi=args.dpi)
 
+elif args.mode == 'hadoop':
+    hadoop(gr, hosts)
+
+elif args.mode == 'simgrid':
+    simgrid(gr, outfile=args.outfile, compact=args.compact, routing='Full')
     if args.check_simgrid:
         logger.info('Checking generated platform file')
         extract = Process('cd examples && tar -xzf masterslave.tgz')
         extract.shell = True
         extract.run()
-        if not '.xml' in args.outfile:
-            args.outfile += '.xml'
-        test = Process('./examples/masterslave/masterslave_arg ' + \
+        test = Process('./examples/masterslave/masterslave_arg ' +
                        args.outfile + ' 10 5').run()
-        print test.stdout
-        print test.stderr
         remove = Process('rm -rf examples/masterslave').run()
+        if not test.ok:
+            print test.stdout
+            print test.stderr
+        else:
+            logger.info(style.command(test.cmd) + ' successfully executed.')
+
