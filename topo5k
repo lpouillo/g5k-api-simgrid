@@ -6,7 +6,7 @@ from execo import logger, Process
 from execo.log import style
 from execo_g5k import get_g5k_sites, get_oar_job_nodes, get_oargrid_job_nodes, \
     get_host_site
-from execo_g5k.topology import g5k_graph, treemap, hadoop, simgrid
+from execo_g5k.topology import g5k_graph, treemap
 
 # Initializing topo5k 
 suffix = '.grid5000.fr'
@@ -134,6 +134,7 @@ if args.job_id:
                 sites.append(site)
         if args.outfile is None:
             args.outfile = args.job_id + '.png'
+    sites = list(set(map(get_host_site, hosts)))
 else:
     if 'grid5000' in args.resources.split(','):
         sites = get_g5k_sites()
