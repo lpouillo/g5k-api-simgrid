@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+<!-- Generated using topo5k 0.1 
+     https://www.grid5000.fr/mediawiki/index.php/Topo5k
+     API commit b33d7bb6feb75424629517b878165fff41dcaff9
+     2014-05-13 15:00:03+02:00 -->
+<platform version="3">
+  <AS id="nancy.grid5000.fr" routing="Floyd">
+    <router id="gw-nancy.nancy.grid5000.fr"/>
+    <AS id="graphene.grid5000.fr" routing="Floyd">
+      <cluster bw="1000000000" core="4" id="graphene_sgraphene2" lat="0.00225" power="8024000000.0" prefix="graphene" radical="40-74" suffix=".nancy.grid5000.fr"/>
+      <cluster bw="1000000000" core="4" id="graphene_sgraphene3" lat="0.00225" power="8024000000.0" prefix="graphene" radical="75-104" suffix=".nancy.grid5000.fr"/>
+      <cluster bw="1000000000" core="4" id="graphene_sgraphene1" lat="0.00225" power="8024000000.0" prefix="graphene" radical="1-39" suffix=".nancy.grid5000.fr"/>
+      <cluster bw="1000000000" core="4" id="graphene_sgraphene4" lat="0.00225" power="8024000000.0" prefix="graphene" radical="105-144" suffix=".nancy.grid5000.fr"/>
+    </AS>
+    <cluster bw="1000000000" core="16" id="graphite" lat="0.00225" power="13170000000.0" prefix="graphite" radical="1-4" suffix=".nancy.grid5000.fr"/>
+    <AS id="griffon.grid5000.fr" routing="Floyd">
+      <cluster bw="1000000000" core="8" id="griffon_sgriffon1" lat="0.00225" power="7963000000.0" prefix="griffon" radical="1-29,58-60" suffix=".nancy.grid5000.fr"/>
+      <cluster bw="1000000000" core="8" id="griffon_sgriffon2" lat="0.00225" power="7963000000.0" prefix="griffon" radical="30-57" suffix=".nancy.grid5000.fr"/>
+      <cluster bw="1000000000" core="8" id="griffon_sgriffon3" lat="0.00225" power="7963000000.0" prefix="griffon" radical="61-92" suffix=".nancy.grid5000.fr"/>
+    </AS>
+  </AS>
+</platform>

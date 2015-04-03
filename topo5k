@@ -8,7 +8,8 @@ from argparse import ArgumentParser, RawTextHelpFormatter
 from execo import logger, Process, format_date
 from execo.log import style
 from execo_g5k import get_g5k_sites, get_oar_job_nodes, get_oargrid_job_nodes, \
-    get_cluster_site, get_host_site, get_host_cluster, get_g5k_clusters, get_g5k_hosts
+    get_cluster_site, get_host_site, get_host_cluster, get_g5k_clusters, \
+    get_g5k_hosts, get_host_shortname
 from execo_g5k.topology import g5k_graph, treemap
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring, dump
@@ -149,19 +150,22 @@ def define_elements(args):
     """ """
     elements = []
     if args.job_id:
+        logger.info('Waiting for job start ...')
         if ':' in args.job_id:
             for job in args.job_id.split(','):
                 site, job_id = job.split(':')
-                elements += get_oar_job_nodes(int(job_id), site)
+                elements += map(lambda h: get_host_shortname(h.address),
+                                get_oar_job_nodes(int(job_id), site))
         else:
-            elements = get_oargrid_job_nodes(int(args.job_id))
+            elements = map(lambda h: get_host_shortname(h.address),
+                           get_oargrid_job_nodes(int(args.job_id)))
     else:
         if 'grid5000' in args.resources.split(','):
             elements = get_g5k_sites()
         else:
             for element in args.resources.split(','):
                 if element in get_g5k_sites() + get_g5k_clusters() + \
-                    get_g5k_hosts():
+                        get_g5k_hosts():
                     elements.append(element)
                 else:
                     logger.warning('%s is not a valid element', element)
@@ -183,11 +187,11 @@ def set_outfile(args, elements):
             else:
                 outfile = args.job_id + '.png'
         else:
-            hosts = filter(lambda x: x in get_g5k_hosts(), elements)
-            clusters = list(set(filter(lambda x: x in get_g5k_clusters(), elements) \
-                + map(get_host_cluster,
-                      filter(lambda h: get_host_cluster(h) in get_g5k_clusters(),
-                             elements))))
+            hosts = map(get_host_shortname, filter(lambda x: x in get_g5k_hosts(), elements))
+            clusters = list(set(filter(lambda x: x in get_g5k_clusters(), elements)
+                                + map(get_host_cluster,
+                                      filter(lambda h: get_host_cluster(h) in get_g5k_clusters(),
+                                             elements))))
             sites = list(set(filter(lambda x: x in get_g5k_sites(), elements) + \
                              map(get_cluster_site, clusters)))
             if len(sites) == len(get_g5k_sites()):

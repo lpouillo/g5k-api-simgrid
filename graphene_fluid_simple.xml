@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+<platform version="3">
+
+<!--
+For clusters a limiter_link tag can be added, to account for the fact that crosstraffic on each node's link is much slower than expected usually.
+-->
+<AS id="AS_graphene" routing="Full" >
+  <cluster id="AS_sgraphene1" prefix="graphene-" suffix=".nancy.grid5000.fr"
+           radical="1-39" power="16.673E9" bw="1.25E8" lat="2.4E-5"
+           sharing_policy="FULLDUPLEX" loopback_lat="1.5E-9" loopback_bw="6000000000"></cluster>
+  <cluster id="AS_sgraphene2" prefix="graphene-" suffix=".nancy.grid5000.fr"
+           radical="40-74" power="16.673E9" bw="1.25E8" lat="2.4E-5"
+           sharing_policy="FULLDUPLEX" loopback_lat="1.5E-9" loopback_bw="6000000000"></cluster>
+  <cluster id="AS_sgraphene3" prefix="graphene-" suffix=".nancy.grid5000.fr"
+           radical="75-104" power="16.673E9" bw="1.25E8" lat="2.4E-5"
+           sharing_policy="FULLDUPLEX" loopback_lat="1.5E-9" loopback_bw="6000000000"></cluster>
+  <cluster id="AS_sgraphene4" prefix="graphene-" suffix=".nancy.grid5000.fr"
+           radical="105-144" power="16.673E9" bw="1.25E8" lat="2.4E-5"
+           sharing_policy="FULLDUPLEX" loopback_lat="1.5E-9" loopback_bw="6000000000"></cluster>
+
+
+
+<!--
+For each one of those link a limiter link can be created to account for crosstraffic slowdowns between cabinets
+  <link id="switch-backbone1" bandwidth="1250000000" latency="1.5E-6" sharing_policy="FULLDUPLEX"/>
+  <link id="explicit-limiter1" bandwidth="1500000000" latency="0" sharing_policy="SHARED"/>
+Then routes must be described in both directions, for example from 4 to 2
+
+                    <ASroute src="AS_sgraphene4" dst="AS_sgraphene2"
+         gw_src="graphene-AS_sgraphene4_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene2_router.nancy.grid5000.fr"
+         symmetrical="NO"         
+         >
+                <link_ctn id="switch-backbone4" direction="UP"/>
+                <link_ctn id="explicit-limiter4"/>
+                <link_ctn id="explicit-limiter2"/>
+                <link_ctn id="switch-backbone2" direction="DOWN"/>
+     </ASroute>
+
+with another asroute from 2 to 4
+-->
+  <link id="switch-backbone1" bandwidth="1250000000" latency="1.5E-6"/>
+  <link id="switch-backbone2" bandwidth="1250000000" latency="1.5E-6"/>
+  <link id="switch-backbone3" bandwidth="1250000000" latency="1.5E-6"/>
+  <link id="switch-backbone4" bandwidth="1250000000" latency="1.5E-6"/>
+
+     <ASroute src="AS_sgraphene1" dst="AS_sgraphene2"
+         gw_src="graphene-AS_sgraphene1_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene2_router.nancy.grid5000.fr"
+         >
+                <link_ctn id="switch-backbone1"/>
+                <link_ctn id="switch-backbone2"/>
+                
+     </ASroute>
+     <ASroute src="AS_sgraphene2" dst="AS_sgraphene3"
+         gw_src="graphene-AS_sgraphene2_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene3_router.nancy.grid5000.fr"
+         >
+                <link_ctn id="switch-backbone2"/>
+                <link_ctn id="switch-backbone3"/>
+     </ASroute>
+     <ASroute src="AS_sgraphene1" dst="AS_sgraphene3"
+         gw_src="graphene-AS_sgraphene1_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene3_router.nancy.grid5000.fr"
+         >
+                <link_ctn id="switch-backbone1"/>
+                <link_ctn id="switch-backbone3"/>
+     </ASroute>
+          <ASroute src="AS_sgraphene1" dst="AS_sgraphene4"
+         gw_src="graphene-AS_sgraphene1_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene4_router.nancy.grid5000.fr"
+         symmetrical="NO"         
+         >
+                <link_ctn id="switch-backbone1"/>
+                <link_ctn id="switch-backbone4"/>
+     </ASroute>
+          <ASroute src="AS_sgraphene2" dst="AS_sgraphene4"
+         gw_src="graphene-AS_sgraphene2_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene4_router.nancy.grid5000.fr"
+         symmetrical="NO"         
+         >
+                <link_ctn id="switch-backbone2"/>
+                <link_ctn id="switch-backbone4"/>
+     </ASroute>
+          <ASroute src="AS_sgraphene3" dst="AS_sgraphene4"
+         gw_src="graphene-AS_sgraphene3_router.nancy.grid5000.fr"
+         gw_dst="graphene-AS_sgraphene4_router.nancy.grid5000.fr"
+         symmetrical="NO"         
+         >
+                <link_ctn id="switch-backbone3"/>
+                <link_ctn id="switch-backbone4"/>
+     </ASroute>
+ </AS>
+</platform>
+
