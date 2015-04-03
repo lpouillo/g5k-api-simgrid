@@ -1,0 +1,59 @@
+<AS grid5000>
+	<AS AS_lyon>
+	<link gw_limiter>
+		<AS gw_lyon>
+		<router id =gw-lyon>
+		</AS>
+	<AS AS_force10>
+	
+	</AS>
+
+	<AS sagittaire_total>
+
+		<AS sagittaire_1>
+
+		</AS>
+
+		<AS sagittaire_2>
+
+		</AS>
+
+		AS route sagittaire1 sagittairz2
+
+		link_ctn gw_limiter
+
+	</AS>
+
+</AS>
+
+<AS AS_grenoble>
+
+<AS AS_gw_grenoble>
+
+<router gw-grenoble>
+
+</AS>
+
+<cluster genepi>
+
+<ASroute genepi AS_gw_grenoble>
+
+</AS>
+
+<link bandwidth="10000000000" id="gw-grenoble.grenoble_renater-grenoble" latency="0.00225"/>
+
+<link bandwidth="10000000000" id="gw-lyon.lyon_renater-lyon" latency="0.00225"/>
+
+<link bandwidth="10000000000" id="renater-grenoble_renater-lyon" latency="0.00225"/>
+
+<ASroute dst="AS_lyon" gw_dst="gw-lyon" gw_src="gw-grenoble" src="AS_grenoble">
+
+<link_ctn id="gw-grenoble.grenoble_renater-grenoble"/>
+
+<link_ctn id="renater-grenoble_renater-lyon"/>
+
+<link_ctn id="gw-lyon.lyon_renater-lyon"/>
+
+</ASroute>
+
+</AS>
