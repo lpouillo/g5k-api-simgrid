@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import datetime
-import networkx as nx
+import matplotlib
 from itertools import groupby
 from operator import itemgetter
 from pprint import pformat
@@ -13,6 +13,9 @@ from execo_g5k import get_g5k_sites, get_oar_job_nodes, get_oargrid_job_nodes, \
 from execo_g5k.topology import g5k_graph, treemap
 from xml.dom import minidom
 from xml.etree.ElementTree import Element, SubElement, tostring, dump
+from decimal import Decimal
+from networkx.algorithms.shortest_paths.generic import shortest_path
+from execo_g5k.api_utils import get_cluster_network_equipments
 
 
 # Initializing topo5k 
@@ -35,7 +38,7 @@ def main():
     # Checking that mode given is valid
     if args.mode not in ['treemap', 'simgrid']:
         logger.error('Invalid mode selected: %s, \ntype %s for help',
-                 style.emph(args.mode), style.emph(prog + ' -h'))
+                     style.emph(args.mode), style.emph(prog + ' -h'))
         exit()
     set_log_level(args)
     elements = define_elements(args)
@@ -49,6 +52,7 @@ def main():
         logger.info('Saving image file to %s', style.emph(outfile))
         plot = treemap(gr, compact=args.compact)
         plot.savefig(outfile, dpi=args.dpi)
+        plot.clf()
     elif args.mode == 'simgrid':
         simgrid(gr, outfile=outfile)
         if args.check_simgrid:
@@ -211,26 +215,38 @@ def set_outfile(args, elements):
 def simgrid(gr, compact=True, outfile=None,
             tool_signature='Generated using %s %s' % (prog, version)):
     """ """
-    def add_AS(elem, AS_id, routing="Floyd"):
+    def add_AS(elem, AS_id, routing="Full"):
         """Add an AS Element to an element"""
         logger.debug('Adding %s to %s', AS_id, elem)
         return SubElement(elem, 'AS', attrib={'id': AS_id, 'routing': routing})
 
-    def add_site(elem, site):
+    def add_site(elem, site, compact=True):
         """ """
         AS_site = add_AS(elem, 'AS_' + site)
-        router, d_router = gr.get_site_router(site)
-        add_router(AS_site, router, str(d_router['backplane']))
-
-        for cluster in gr.get_clusters(site):
-            add_cluster(AS_site, cluster)
-
+        # Checking the number of active equipments
+        equips = []
+        for c in gr.get_clusters(site):
+            for e in get_cluster_network_equipments(c):
+                if e not in equips:
+                    equips.append(e)
+        if len(equips) == 1:
+            if len(gr.get_clusters(site)) == 1:
+                # if only one cluster, no need to define a router and
+                # the ASroute
+                add_cluster(AS_site, gr.get_clusters(site)[0])
+            else:
+                _add_site_mono_equip(AS_site)
+        else:
+            if len(gr.get_clusters(site)) == 1:
+                # Adding the router
+                router, d_router = gr.get_site_router(site)
+                add_router(AS_site, router, str(d_router['backplane']))
+                add_cluster(AS_site, gr.get_clusters(site)[0])
+            else:
+                print 'pour demain'
+                exit()
+     
     def add_router(elem, router_id, backplane_bps=None):
-        logger.debug('Adding limiter link for router')
-        dump(elem)
-        SubElement(elem, 'link', attrib={'id': 'gw_limiter',
-                                         'bandwidth': backplane_bps,
-                                         'latency': '0'})
         router_as = add_AS(elem, 'AS_' + router_id)
         SubElement(router_as, 'router', attrib={'id': router_id})
 
@@ -238,42 +254,37 @@ def simgrid(gr, compact=True, outfile=None,
         """ """
         equips = {}
         for host in gr.get_hosts(cluster=cluster):
-#            print gr.edges([host[0]] + gr.neighbors(host[0]), data=True)
-
             links = filter(lambda x: (x[0] == host[0] or x[1] == host[0])
                            and x[2]['active'],
                            gr.edges([host[0]] + gr.neighbors(host[0]),
                                     data=True))
             for l in links:
-                bw = str(l[2]['bandwidth'])
+                bw = _bw_compact(l[2]['bandwidth'])
                 if l[1] not in equips:
                     equips[l[1]] = []
                 equips[l[1]].append(host[0])
             cores = str(host[1]['cores'])
-            power = str(host[1]['power'])
+            power = _flops_compact(host[1]['power'])
 
         if len(equips) == 1:
             radical = _get_radical_list(equips[equips.keys()[0]])
-            AS_equip = elem.find("./AS[@id='" + equips.keys()[0] + "']")
-            if not AS_equip:
-                AS_equip = SubElement(elem, 'AS',
-                                      attrib={'id': equips.keys()[0]})
-
-            SubElement(AS_equip, 'cluster', attrib={'id': cluster,
-                                                'radical': radical,
-                                                'prefix': cluster + '-',
-                                                'suffix': '.grid5000.fr',
-                                                'power': power,
-                                                'core': cores,
-                                                'bw': bw,
-                                                'lat': '0'})
+            bb_bw = _bw_compact(gr.node[equips.keys()[0]]['backplane'])
+            SubElement(elem, 'cluster',
+                       attrib={'id': cluster,
+                               'radical': radical,
+                               'prefix': cluster + '-',
+                               'suffix': '.grid5000.fr',
+                               'power': power,
+                               'core': cores,
+                               'bw': bw,
+                               'bb_bw': bb_bw,
+                               'lat': '0',
+                               'router_id': equips.keys()[0].split('_')[0]})
         else:
-            AS_cluster_total = add_AS(elem, cluster + '_total')
             for i, eq in enumerate(equips):
                 radical = _get_radical_list(equips[eq])
-                AS_sub_cluster = add_AS(AS_cluster_total, cluster + '_' +
-                                        str(i))
-                SubElement(AS_sub_cluster, 'cluster',
+                bb_bw = _bw_compact(gr.node[equips.keys()[0]]['backplane'])
+                SubElement(elem, 'cluster',
                            attrib={'id': cluster + '_' + str(i),
                                    'radical': radical,
                                    'prefix': cluster + '-',
@@ -281,7 +292,80 @@ def simgrid(gr, compact=True, outfile=None,
                                    'power': power,
                                    'core': cores,
                                    'bw': bw,
-                                   'lat': '0'})
+                                   'bb_bw': bb_bw,
+                                   'lat': '0',
+                                   'router_id': eq})
+
+    def add_backbone(elem, sites):
+        """ """
+
+    def _add_site_mono_equip(AS_site):
+        site = AS_site.get('id').split('_')[1]
+        for cluster in gr.get_clusters(site):
+            add_cluster(AS_site, cluster)
+            # Adding the router
+            router, d_router = gr.get_site_router(site)
+            add_router(AS_site, router, str(d_router['backplane']))
+            # Adding the clusters
+            for cluster in gr.get_clusters(site):
+                add_cluster(AS_site, cluster)
+            # Adding the ASroutes
+            ASroutes = []
+            router_element = AS_site.find('.//router')
+            parent_router = router_element.get('id')
+            for cluster in AS_site.findall('./cluster'):
+                id = cluster.get('id')
+                router = cluster.get('router_id')
+                ASroutes.append([{'src': 'AS_' + parent_router,
+                                  'dst': id,
+                                  'gw_src': parent_router,
+                                  'gw_dst': router}, []])
+                path = shortest_path(gr, router, parent_router)
+                links = []
+                for j in range(len(path[:-1])):
+                    link_bw = _bw_compact(gr[path[j]][path[j + 1]].values()[0]['bandwidth'])
+                    links.append({'id': parent_router + '_limiter',
+                                  'bandwidth': link_bw,
+                                  'latency': '0'})
+                ASroutes[-1][1] = links
+                for cl2 in AS_site.findall('./cluster'):
+                    if cl2.get('id') != id:
+                        ASroutes.append([{'src': id,
+                                          'dst': cl2.get('id'),
+                                          'gw_src': router,
+                                          'gw_dst': cl2.get('router_id')},
+                                         [{'id': parent_router + '_limiter',
+                                           'bandwidth': link_bw,
+                                           'latency': '0'}]])
+            for _, links in ASroutes:
+                for l in links:
+                    if AS_site.find(".//link[@id='" + l['id'] + "']") is None:
+                        SubElement(AS_site, 'link', attrib=l)
+            for asroute, links in ASroutes:
+                route = SubElement(AS_site, 'ASroute', attrib=asroute)
+                for l in links:
+                    SubElement(route, 'link_ctn', id=l['id'])
+
+    def _subs_E(string):
+        """ """
+        conv = {0: '', 3: 'k', 6: 'M', 9: 'G', 12: 'T'}
+        for pat, sub in conv.iteritems():
+            real_pat = 'E+' + "%d" % pat
+            if real_pat in string:
+                return string.replace(real_pat, sub)
+
+    def _flops_compact(flops):
+        """ """
+        sci_not = Decimal(flops).normalize().to_eng_string()
+        return _subs_E(sci_not) + 'f'
+
+    def _bw_compact(bw):
+        """ """
+        if not bw:
+            sci_not = "1E+12"
+        else:
+            sci_not = Decimal(bw / 8).normalize().to_eng_string()
+        return _subs_E(sci_not) + 'Bps'
 
     def _get_radical_list(equip):
         """ """
@@ -304,14 +388,12 @@ def simgrid(gr, compact=True, outfile=None,
 
 #    print gr.nodes(), filter(lambda x: x[2]['active'], gr.edges(data=True))
     if len(sites) == 1:
-        add_site(platform, sites[0])
-
-#            print AS_clusters
-
+        add_site(platform, sites[0], compact=compact)
     else:
         main_as = add_AS(platform, 'AS_grid5000')
         for site in sites:
-            add_site(main_as, site)
+            add_site(main_as, site, compact=compact)
+        add_backbone(main_as, sites)
 
     logger.info('Saving file to %s', style.emph(outfile))
     f = open(outfile, 'w')
@@ -323,7 +405,6 @@ def simgrid(gr, compact=True, outfile=None,
             '\n     ' + format_date(gr.graph['date']) + ' -->\n' +
             prettify(platform))
     f.close()
-#    exit()
 
 
 def check_simgrid(fname):
@@ -332,8 +413,7 @@ def check_simgrid(fname):
         fname + ' 10 5'
     logger.info('Executing %s with generated platform file',
                 style.command(cmd))
-    Process('cd examples && tar -xzf masterslave.tgz',
-                      shell=True).run()
+    Process('cd examples && tar -xzf masterslave.tgz', shell=True).run()
     test = Process('./examples/masterslave/masterslave_arg ' +
                    fname + ' 10 5').run()
     Process('rm -rf examples/masterslave').run()
@@ -350,4 +430,3 @@ def prettify(elem):
 
 if __name__ == "__main__":
     main()
-
