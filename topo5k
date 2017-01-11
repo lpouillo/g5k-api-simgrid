@@ -29,7 +29,7 @@ version = '0.1'
 description = 'This tool provides an access to the network topology of ' + \
     'the Grid\'5000 platform. It has two output format: \n' + \
     style.host('treemap') + ' = generate a map with networkx\n' + \
-    style.host('simgrid') + ' = produce a SimGrid platform file'
+    style.host('simgrid') + ' = produce a SimGrid platform file (v4)'
 epilog = ''
 
 
@@ -265,7 +265,7 @@ def simgrid(gr, compact=True, outfile=None,
                            'radical': radical,
                            'prefix': cluster + '-',
                            'suffix': '.grid5000.fr',
-                           'power': power,
+                           'speed': power,
                            'core': cores,
                            'bw': bw,
                            'bb_bw': bb_bw,
@@ -290,7 +290,7 @@ def simgrid(gr, compact=True, outfile=None,
                                'radical': radical,
                                'prefix': cluster + '-',
                                'suffix': '.grid5000.fr',
-                               'power': power,
+                               'speed': power,
                                'core': cores,
                                'bw': bw,
                                'bb_bw': bb_bw,
@@ -323,7 +323,7 @@ def simgrid(gr, compact=True, outfile=None,
                                    'radical': radical,
                                    'prefix': c + '-',
                                    'suffix': '.grid5000.fr',
-                                   'power': power,
+                                   'speed': power,
                                  # 'core': cores,
                                    'bw': bw,
                                    'lat': '0'})
@@ -459,7 +459,7 @@ def simgrid(gr, compact=True, outfile=None,
             radical += ','
         return radical[:-1]
 
-    platform = Element('platform', attrib={'version': '3'})
+    platform = Element('platform', attrib={'version': '4'})
 
     sites = gr.get_sites()
     # print gr.nodes(), filter(lambda x: x[2]['active'], gr.edges(data=True))
@@ -475,7 +475,7 @@ def simgrid(gr, compact=True, outfile=None,
     f = open(outfile, 'w')
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n' +
             '<!DOCTYPE platform SYSTEM ' +
-            '"http://simgrid.gforge.inria.fr/simgrid.dtd">\n' +
+            '"http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">\n' +
             '<!-- ' + tool_signature + '\n     ' +
             'API commit ' + gr.graph['api_commit'] +
             '\n     ' + format_date(gr.graph['date']) + ' -->\n' +
