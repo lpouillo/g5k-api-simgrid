@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 import sys
 import json
+import matplotlib
+import ConfigParser
+matplotlib.use('agg')
 from wikitools import wiki, page, wikifile
 from os import environ, mkdir
 from execo import logger
@@ -9,6 +12,7 @@ from networkx.readwrite import json_graph
 from execo_g5k.topology import g5k_graph, treemap
 from argparse import ArgumentParser
 from execo_g5k.api_utils import get_g5k_sites
+
 
 parser = ArgumentParser(prog=sys.argv[0],
                         description='Update topology maps on the' +
@@ -45,15 +49,20 @@ if update_needed:
     pagename = site.title() + ' Network Topology'
     text = "This page is generated automatically from the Network API " + \
         "and shows you the topology of [[" + site.title() + ":Network]].\n\n" + \
-        "[[File:topo_" + site + ".png|500px|center]]"
-    website = wiki.Wiki("http://140.77.13.123/mediawiki/api.php")
-    website.login('lolo', password='prout')
+        "[[File:topo_" + site + ".svg|500px|center]]"
+
+    config = ConfigParser.ConfigParser()
+    config.read('/var/lib/jenkins/jjb/jenkins_jobs.ini')
+    password = config.get('jenkins', 'password')
+
+    website = wiki.Wiki("https://www.grid5000.fr/mediawiki/api.php")
+    website.login('ajenkins', password=password, domain='Grid5000')
     topo = page.Page(website, pagename)
     topo.edit(text=text)
     fig = treemap(g, layout='neato')
-    fig.savefig("topo_" + site + ".png")
-    upload_file = wikifile.File(website, "topo_" + site + ".png")
-    upload_file.upload(open("topo_" + site + ".png"),
+    fig.savefig("topo_" + site + ".svg")
+    upload_file = wikifile.File(website, "topo_" + site + ".svg")
+    upload_file.upload(open("topo_" + site + ".svg"),
                        ignorewarnings=True)
     fresh_json = json_graph.node_link_data(g)
     with open(_json_dir + site + '.json', 'w') as outfile:
