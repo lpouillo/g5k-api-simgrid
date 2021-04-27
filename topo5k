@@ -46,8 +46,8 @@ def main():
     outfile = set_outfile(args, elements)
 
     gr = g5k_graph(elements)
-    logger.debug('Nodes \n%s', pformat(sorted(gr.nodes(data=True))))
-    logger.debug('Edges \n%s', pformat(sorted(gr.edges(data=True))))
+    logger.debug('Nodes \n%s', pformat(sorted(gr.nodes())))
+    logger.debug('Edges \n%s', pformat(sorted(gr.edges())))
 
     if args.mode == 'treemap':
         logger.info('Saving image file to %s', style.emph(outfile))
@@ -193,12 +193,8 @@ def set_outfile(args, elements):
                 outfile = args.job_id + '.png'
         else:
             hosts = map(get_host_shortname, filter(lambda x: x in get_g5k_hosts(), elements))
-            clusters = list(set(filter(lambda x: x in get_g5k_clusters(), elements)
-                                + map(get_host_cluster,
-                                      filter(lambda h: get_host_cluster(h) in get_g5k_clusters(),
-                                             elements))))
-            sites = list(set(filter(lambda x: x in get_g5k_sites(), elements) + \
-                             map(get_cluster_site, clusters)))
+            clusters = list(set([ get_host_cluster[e] for e in elements if get_host_cluster(e) in get_g5k_clusters() ]))
+            sites = list(set([ get_cluster_site(c) for c in clusters ] + [ e for e in elements if e in get_g5k_sites() ]))
             if len(sites) == len(get_g5k_sites()):
                 outfile = 'grid5000-' + str(datetime.date.today())
             else:
@@ -449,7 +445,7 @@ def simgrid(gr, compact=True, outfile=None,
         radical = ''
         radical_list = sorted(map(lambda x: int(x.split('-')[1]), hosts))
         for k, g in groupby(enumerate(radical_list),
-                            lambda (i, x): i - x):
+                            lambda t: t[0] - t[1]):
             radical_range = map(itemgetter(1), g)
             if len(radical_range) > 1:
                 radical += str(min(radical_range)) + '-' + \
