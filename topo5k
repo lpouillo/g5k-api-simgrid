@@ -246,15 +246,15 @@ def simgrid(gr, compact=True, outfile=None,
         """ """
         # retrieving first host data
         h = cluster + '-1'
-        power, cores = _flops_compact(gr.node[h]['power']), str(gr.node[h]['cores'])
         lc = gr.neighbors(h)[0]
+        power, cores = _flops_compact(gr.nodes[h]['power']), str(gr.nodes[h]['cores'])
         # retrieving equip data
-        bb_bw = _bw_compact(gr.node[lc]['backplane'])
+        bb_bw = _bw_compact(gr.nodes[lc]['backplane'])
         neighbors = gr.neighbors(lc)
-        hosts = filter(lambda h: gr.node[h]['kind'] == 'node', neighbors)
+        hosts = [ h for h in neighbors if gr.nodes[h]['kind'] == 'node' ]
         radical = _get_radical_list(hosts)
         # retrieving link data
-        bw = _bw_compact(gr.edge[h][lc].values()[0]['bandwidth'])
+        bw = _bw_compact([e for e in gr.edges(h, data=True) if lc in e][0][2]['bandwidth'])
 
         SubElement(AS_site, 'cluster',
                    attrib={'id': cluster,
@@ -272,15 +272,15 @@ def simgrid(gr, compact=True, outfile=None,
         """ """
         # Retrieving host power and cores
         h = cluster + '-1'
-        power, cores = _flops_compact(gr.node[h]['power']), str(gr.node[h]['cores'])
+        power, cores = _flops_compact(gr.nodes[h]['power']), str(gr.nodes[h]['cores'])
         # Retrieving equipments info
-        lcs = {lc: _bw_compact(gr.node[lc]['backplane'])
+        lcs = {lc: _bw_compact(gr.nodes[lc]['backplane'])
                for lc in _get_cluster_lcs(cluster, gr)}
         i = 0
-        for lc, bb_bw in lcs.iteritems():
-            hosts = filter(lambda h: gr.node[h]['kind'] == 'node', gr.neighbors(lc))
+        for lc, bb_bw in lcs.items():
+            hosts = [ h for h in gr.neighbors(lc) if gr.nodes[h]['kind'] == 'node' ]
             radical = _get_radical_list(hosts)
-            bw = _bw_compact(gr.edge[hosts[0]][lc].values()[0]['bandwidth'])
+            bw = _bw_compact([e for e in gr.edges(next(iter(hosts)), data=True) if lc in e][0][2]['bandwidth'])
             SubElement(AS_site, 'cluster',
                        attrib={'id': cluster + '_' + str(i),
                                'radical': radical,
@@ -301,18 +301,18 @@ def simgrid(gr, compact=True, outfile=None,
             for h in get_cluster_hosts(c):
                 lc = gr.neighbors(h)[0]
                 if lc not in lcs:
-                    lcs[lc] = _bw_compact(gr.node[lc]['backplane'])
-        for lc, bb_bw in lcs.iteritems():
+                    lcs[lc] = _bw_compact(gr.nodes[lc]['backplane'])
+        for lc, bb_bw in lcs.items():
             cabinets_as = add_AS(AS_site, 'AS_' + lc, 'Cluster')
             SubElement(cabinets_as, 'router', attrib={'id': lc})
             SubElement(cabinets_as, 'backbone', attrib={'id': 'backbone_' + lc,
                                                         'bandwidth': bb_bw,
                                                         'latency': str(0)})
-            hosts = filter(lambda h: gr.node[h]['kind'] == 'node', gr.neighbors(lc))
+            hosts = [ h for h in gr.neighbors(lc) if gr.nodes[h]['kind'] == 'node' ]
             grouped_hosts = group_hosts(hosts)
-            for c, cl_h in grouped_hosts[AS_site.get('id').split('_')[1]].iteritems():
-                power, cores = _flops_compact(gr.node[cl_h[0]]['power']), str(gr.node[cl_h[0]]['cores'])
-                bw = _bw_compact(gr.edge[cl_h[0]][lc].values()[0]['bandwidth'])
+            for c, cl_h in grouped_hosts[AS_site.get('id').split('_')[1]].items():
+                power, cores = _flops_compact(gr.nodes[cl_h[0]]['power']), str(gr.nodes[cl_h[0]]['cores'])
+                bw = _bw_compact([e for e in gr.edges(cl_h[0], data=True) if lc in e][0][2]['bandwidth'])
                 radical = _get_radical_list(cl_h)
                 SubElement(cabinets_as, 'cabinet', 
                            attrib={'id': c,
@@ -405,9 +405,9 @@ def simgrid(gr, compact=True, outfile=None,
 
         dep_clusters = []
         indep_clusters = []
-        for c1, eq1 in lcs.iteritems():
+        for c1, eq1 in lcs.items():
             is_indep = True
-            for c2, eq2 in lcs.iteritems():
+            for c2, eq2 in lcs.items():
                 if c2 != c1:
                     if len(set(eq1).intersection(set(eq2))):
                         is_indep = False
@@ -421,7 +421,7 @@ def simgrid(gr, compact=True, outfile=None,
     def _subs_E(string):
         """ """
         conv = {0: '', 3: 'k', 6: 'M', 9: 'G', 12: 'T'}
-        for pat, sub in conv.iteritems():
+        for pat, sub in conv.items():
             real_pat = 'E+' + "%d" % pat
             if real_pat in string:
                 return string.replace(real_pat, sub)
