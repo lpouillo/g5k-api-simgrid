@@ -245,7 +245,7 @@ def simgrid(gr, compact=True, outfile=None,
     def single_cluster_single_equip(cluster, AS_site, gr):
         """ """
         # retrieving first host data
-        h = cluster + '-1'
+        h = get_cluster_hosts(cluster)[0]
         power, cores = _flops_compact(gr.nodes[h]['power']), str(gr.nodes[h]['cores'])
         lc = next(iter(gr.neighbors(h)))
         # retrieving equip data
@@ -271,7 +271,7 @@ def simgrid(gr, compact=True, outfile=None,
     def single_cluster_multi_equip(cluster, AS_site, gr):
         """ """
         # Retrieving host power and cores
-        h = cluster + '-1'
+        h = get_cluster_hosts(cluster)[0]
         power, cores = _flops_compact(gr.nodes[h]['power']), str(gr.nodes[h]['cores'])
         # Retrieving equipments info
         lcs = {lc: _bw_compact(gr.nodes[lc]['backplane'])
