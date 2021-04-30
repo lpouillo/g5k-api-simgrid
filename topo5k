@@ -446,7 +446,7 @@ def simgrid(gr, compact=True, outfile=None,
         radical_list = sorted(map(lambda x: int(x.split('-')[1]), hosts))
         for k, g in groupby(enumerate(radical_list),
                             lambda t: t[0] - t[1]):
-            radical_range = map(itemgetter(1), g)
+            radical_range = list(map(itemgetter(1), g))
             if len(radical_range) > 1:
                 radical += str(min(radical_range)) + '-' + \
                     str(max(radical_range))
