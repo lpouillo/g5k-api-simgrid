@@ -246,8 +246,8 @@ def simgrid(gr, compact=True, outfile=None,
         """ """
         # retrieving first host data
         h = cluster + '-1'
-        lc = gr.neighbors(h)[0]
         power, cores = _flops_compact(gr.nodes[h]['power']), str(gr.nodes[h]['cores'])
+        lc = next(iter(gr.neighbors(h)))
         # retrieving equip data
         bb_bw = _bw_compact(gr.nodes[lc]['backplane'])
         neighbors = gr.neighbors(lc)
@@ -299,7 +299,7 @@ def simgrid(gr, compact=True, outfile=None,
         lcs = {}
         for c in dep_cl:
             for h in get_cluster_hosts(c):
-                lc = gr.neighbors(h)[0]
+                lc = next(iter(gr.neighbors(h)))
                 if lc not in lcs:
                     lcs[lc] = _bw_compact(gr.nodes[lc]['backplane'])
         for lc, bb_bw in lcs.items():
@@ -391,7 +391,7 @@ def simgrid(gr, compact=True, outfile=None,
         lcs = []
         for h in get_cluster_hosts(cluster):
             if h in gr.nodes():
-                lc = gr.neighbors(h)[0]
+                lc = next(iter(gr.neighbors(h)))
                 if lc not in lcs:
                     lcs.append(lc)
 
