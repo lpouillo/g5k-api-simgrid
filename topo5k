@@ -207,6 +207,11 @@ def set_outfile(args, elements):
         outfile = args.outfile
     return outfile
 
+def _get_site_router(gr, site):
+    for n in gr.nodes:
+        if n.endswith(f'.{site}') and gr.nodes[n]['kind'] == 'router':
+            return n
+    return None
 
 def simgrid(gr, compact=True, outfile=None,
             tool_signature='Generated using %s %s' % (prog, version)):
@@ -226,11 +231,11 @@ def simgrid(gr, compact=True, outfile=None,
             if len(_get_cluster_lcs(cluster, gr)) == 1:
                 single_cluster_single_equip(cluster, AS_site, gr)
             else:
-                add_router(AS_site, 'gw-' + site)
+                add_router(AS_site, _get_site_router(gr, site))
                 single_cluster_multi_equip(cluster, AS_site, gr)
                 add_site_AS_routes(AS_site)
         else:
-            add_router(AS_site, 'gw-' + site)
+            add_router(AS_site, _get_site_router(gr, site))
             indep_cl, dep_cl = _clusters_dependance(clusters, gr)
             for c in indep_cl:
                 if len(_get_cluster_lcs(c, gr)) == 1:
@@ -352,8 +357,9 @@ def simgrid(gr, compact=True, outfile=None,
             path = shortest_path(gr, router1, parent_router)
 
             links = []
+            link_bw = None
             for j in range(len(path[:-1])):
-                link_bw = _bw_compact(gr[path[j]][path[j + 1]].values()[0]['bandwidth'])
+                link_bw = _bw_compact(next(iter(gr[path[j]][path[j + 1]].values()))['bandwidth'])
                 links.append({'id': path[j+1] + '_limiter',
                               'bandwidth': link_bw,
                               'latency': '0'})
